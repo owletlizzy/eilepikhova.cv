@@ -151,7 +151,7 @@ button {font-family: Georgia, Times, "Times New Roman", serif;font-size:16px;pad
 
 .contact-list {margin: 0;
     list-style-type: none;display: flex;justify-content: center;text-align: center;flex-direction: row;align-items: center;gap: 20px;flex-basis: 100%;
-    flex-wrap: wrap;align-self: center;}
+    flex-wrap: nowrap;align-self: center;}
 
 .contact-list a {list-style-type: none; display: inline-block;text-align: center;justify-content: center;margin: 0;align-self: center;}
 .container_lang {text-align: center;}
