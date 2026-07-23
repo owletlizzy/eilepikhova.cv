@@ -503,17 +503,33 @@ button {
 
 
 .profile-crest {
-  width: 330px;
+  width: 360px;
   margin: 28px auto 40px;
   text-align: center;
   color: #140014;
 }
 
-.crest-top-motto {
-  margin-bottom: 14px;
+.crest-ribbon {
+  display: inline-block;
+  min-width: 190px;
+  padding: 6px 20px;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 16px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
   color: #140014;
+  background: #f7effb;
+  border: 2px solid #140014;
+  border-radius: 50% / 35%;
+  line-height: 1.2;
+}
+
+.crest-ribbon-top {
+  margin-bottom: 16px;
+}
+
+.crest-ribbon-bottom {
+  margin-top: 18px;
 }
 
 .crest-frame {
@@ -528,24 +544,6 @@ button {
   box-shadow: 0 8px 18px rgba(20, 0, 20, 0.18);
 }
 
-.crest-frame::before,
-.crest-frame::after {
-  content: "❦";
-  position: absolute;
-  top: 42%;
-  font-size: 34px;
-  color: #140014;
-}
-
-.crest-frame::before {
-  left: -42px;
-}
-
-.crest-frame::after {
-  right: -42px;
-  transform: scaleX(-1);
-}
-
 .crest-photo {
   display: block;
   width: 100%;
@@ -555,14 +553,18 @@ button {
   border-radius: 48% 48% 42% 42% / 36% 36% 52% 52%;
 }
 
-.crest-ribbon {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 7px 28px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 15px;
+.crest-star {
+  position: absolute;
+  top: 46%;
+  font-size: 32px;
   color: #140014;
-  background: #fff7ff;
-  border: 2px solid #140014;
-  border-radius: 50% / 35%;
+  line-height: 1;
+}
+
+.crest-star-left {
+  left: -44px;
+}
+
+.crest-star-right {
+  right: -44px;
 }
