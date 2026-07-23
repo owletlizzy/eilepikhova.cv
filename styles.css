@@ -502,39 +502,38 @@ button {
 }
 
 
-.profile-emblem {
-  margin: 28px auto 35px;
+.profile-motto-card {
+  width: 360px;
+  margin: 25px auto 40px;
+  padding: 10px 0 22px;
   text-align: center;
-}
-
-.profile-photo {
-  display: block;
-  width: 285px;
-  height: 285px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
-  margin: 8px auto;
-  border: 4px solid #140014;
-  box-shadow: 0 8px 18px rgba(20, 0, 20, 0.18);
+  background: #eadbea;
 }
 
 .profile-motto {
-  display: inline-block;
-  font-family: Georgia, Times, "Times New Roman", serif;
-  font-size: 18px;
-  font-style: italic;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
   color: #140014;
-  background: #fff7ff;
-  border: 2px solid #140014;
-  padding: 6px 22px;
   line-height: 1.2;
 }
 
-.profile-motto-top {
-  margin-bottom: 4px;
+.top-motto {
+  margin-bottom: 26px;
 }
 
-.profile-motto-bottom {
-  margin-top: 4px;
+.bottom-motto {
+  margin-top: 38px;
+}
+
+.profile-motto-photo {
+  display: block;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
 }
