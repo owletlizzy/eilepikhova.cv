@@ -503,17 +503,17 @@ button {
 
 
 .profile-motto-card {
-  width: 360px;
-  margin: 25px auto 40px;
-  padding: 10px 0 22px;
+  width: 320px;
+  margin: 24px auto 34px;
+  padding: 0;
   text-align: center;
-  background: #eadbea;
+  background: transparent;
 }
 
 .profile-motto {
   margin: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   color: #140014;
@@ -521,19 +521,35 @@ button {
 }
 
 .top-motto {
-  margin-bottom: 26px;
+  margin-bottom: 18px;
 }
 
 .bottom-motto {
-  margin-top: 38px;
+  margin-top: 22px;
 }
 
 .profile-motto-photo {
   display: block;
-  width: 300px;
-  height: 400px;
+  width: 240px;
+  height: 320px;
   margin: 0 auto;
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
 }
+Keep the HTML as:
+<figure class="profile-motto-card">
+  <figcaption class="profile-motto top-motto">
+    Hic Rhodus, hic salta
+  </figcaption>
+
+  <img
+    src="me.png"
+    alt="Elizaveta (Liz) Lepikhova"
+    class="profile-motto-photo"
+  >
+
+  <figcaption class="profile-motto bottom-motto">
+    Prove that you can
+  </figcaption>
+</figure>
