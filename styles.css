@@ -502,54 +502,67 @@ button {
 }
 
 
-.profile-motto-card {
-  width: 320px;
-  margin: 24px auto 34px;
-  padding: 0;
+.profile-crest {
+  width: 330px;
+  margin: 28px auto 40px;
   text-align: center;
-  background: transparent;
-}
-
-.profile-motto {
-  margin: 0;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
   color: #140014;
-  line-height: 1.2;
 }
 
-.top-motto {
-  margin-bottom: 18px;
+.crest-top-motto {
+  margin-bottom: 14px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: #140014;
 }
 
-.bottom-motto {
-  margin-top: 22px;
-}
-
-.profile-motto-photo {
-  display: block;
-  width: 240px;
-  height: 320px;
+.crest-frame {
+  position: relative;
+  width: 250px;
+  height: 330px;
   margin: 0 auto;
+  padding: 8px;
+  background: #f7effb;
+  border: 3px solid #140014;
+  border-radius: 48% 48% 42% 42% / 36% 36% 52% 52%;
+  box-shadow: 0 8px 18px rgba(20, 0, 20, 0.18);
+}
+
+.crest-frame::before,
+.crest-frame::after {
+  content: "❦";
+  position: absolute;
+  top: 42%;
+  font-size: 34px;
+  color: #140014;
+}
+
+.crest-frame::before {
+  left: -42px;
+}
+
+.crest-frame::after {
+  right: -42px;
+  transform: scaleX(-1);
+}
+
+.crest-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 50%;
+  border-radius: 48% 48% 42% 42% / 36% 36% 52% 52%;
 }
-Keep the HTML as:
-<figure class="profile-motto-card">
-  <figcaption class="profile-motto top-motto">
-    Hic Rhodus, hic salta
-  </figcaption>
 
-  <img
-    src="me.png"
-    alt="Elizaveta (Liz) Lepikhova"
-    class="profile-motto-photo"
-  >
-
-  <figcaption class="profile-motto bottom-motto">
-    Prove that you can
-  </figcaption>
-</figure>
+.crest-ribbon {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 7px 28px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+  color: #140014;
+  background: #fff7ff;
+  border: 2px solid #140014;
+  border-radius: 50% / 35%;
+}
