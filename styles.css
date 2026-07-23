@@ -168,51 +168,21 @@ button {font-family: Georgia, Times, "Times New Roman", serif;font-size:16px;pad
   margin: 25px auto 35px;
 }
 
-.cv-top-skills {
+.cv-hex-skills {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;
-  margin: 30px auto 10px;
-  max-width: 900px;
+  gap: 18px;
+  margin: 35px auto 20px;
+  max-width: 1000px;
   text-align: center;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
-.skill-shape {
+.cv-hex-card {
+  width: 275px;
+  height: 245px;
   background: #f7effb;
   color: #140014;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 22px;
-  box-sizing: border-box;
-}
-
-.skill-shape h3 {
-  margin: 0 0 7px;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.15;
-}
-
-.skill-shape p {
-  margin: 0;
-  text-align: center;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  font-size: 14px;
-  line-height: 1.25;
-}
-
-.circle {
-  width: 235px;
-  height: 235px;
-  border-radius: 50%;
-}
-
-.hexagon {
-  width: 290px;
-  height: 255px;
   clip-path: polygon(
     25% 0%,
     75% 0%,
@@ -221,12 +191,57 @@ button {font-family: Georgia, Times, "Times New Roman", serif;font-size:16px;pad
     25% 100%,
     0% 50%
   );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 42px;
+  box-sizing: border-box;
 }
 
-.hexagon-content {
+.cv-hex-card-large {
+  width: 325px;
+  height: 285px;
+}
+
+.cv-hex-content {
   max-width: 220px;
 }
 
+.cv-hex-card h3 {
+  margin: 0 0 8px;
+  text-align: center;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.cv-hex-card p {
+  margin: 0;
+  text-align: center;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 13.5px;
+  font-style: normal;
+  line-height: 1.22;
+}
+
+/* Mobile */
+@media screen and (max-width: 850px) {
+  .cv-hex-skills {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .cv-hex-card,
+  .cv-hex-card-large {
+    width: 285px;
+    height: 255px;
+  }
+
+  .cv-hex-card-large {
+    height: 285px;
+  }
+}
 /* Mobile */
 @media screen and (max-width: 850px) {
   .cv-top-skills {
