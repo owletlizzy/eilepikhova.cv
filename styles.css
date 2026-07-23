@@ -500,3 +500,41 @@ button {
     background-position: bottom right;
   }
 }
+
+
+.profile-emblem {
+  margin: 28px auto 35px;
+  text-align: center;
+}
+
+.profile-photo {
+  display: block;
+  width: 285px;
+  height: 285px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin: 8px auto;
+  border: 4px solid #140014;
+  box-shadow: 0 8px 18px rgba(20, 0, 20, 0.18);
+}
+
+.profile-motto {
+  display: inline-block;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #140014;
+  background: #fff7ff;
+  border: 2px solid #140014;
+  padding: 6px 22px;
+  line-height: 1.2;
+}
+
+.profile-motto-top {
+  margin-bottom: 4px;
+}
+
+.profile-motto-bottom {
+  margin-top: 4px;
+}
