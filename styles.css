@@ -168,63 +168,6 @@ button {font-family: Georgia, Times, "Times New Roman", serif;font-size:16px;pad
   margin: 25px auto 35px;
 }
 
-.cv-hex-skills {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-  margin: 35px auto 20px;
-  max-width: 1000px;
-  text-align: center;
-}
-
-.cv-hex-card {
-  width: 275px;
-  height: 245px;
-  background: #f7effb;
-  color: #140014;
-  clip-path: polygon(
-    25% 0%,
-    75% 0%,
-    100% 50%,
-    75% 100%,
-    25% 100%,
-    0% 50%
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 28px 42px;
-  box-sizing: border-box;
-}
-
-.cv-hex-card-large {
-  width: 325px;
-  height: 285px;
-}
-
-.cv-hex-content {
-  max-width: 220px;
-}
-
-.cv-hex-card h3 {
-  margin: 0 0 8px;
-  text-align: center;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.15;
-}
-
-.cv-hex-card p {
-  margin: 0;
-  text-align: center;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  font-size: 13.5px;
-  font-style: normal;
-  line-height: 1.22;
-}
-
 /* Mobile */
 @media screen and (max-width: 850px) {
   .cv-hex-skills {
@@ -286,3 +229,84 @@ button {font-family: Georgia, Times, "Times New Roman", serif;font-size:16px;pad
 @media screen and (min-width:1015px) {}*/
 @media screen and (min-width:850px) {.image_GC img {float:left; margin:10px;}}
 @media screen and (min-width:1040px) {.education_section {background-image: url(background.png);background-size: cover;max-width: 900px;background-position:bottom right;}}
+
+
+.cv-hex-skills {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 18px !important;
+  margin: 35px auto 20px !important;
+  max-width: 1000px !important;
+  text-align: center !important;
+}
+
+.cv-hex-card {
+  width: 275px !important;
+  height: 245px !important;
+  background: #f7effb !important;
+  color: #140014 !important;
+  clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  ) !important;
+  -webkit-clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  ) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 28px 42px !important;
+  box-sizing: border-box !important;
+}
+
+.cv-hex-card-large {
+  width: 325px !important;
+  height: 285px !important;
+}
+
+.cv-hex-card h3 {
+  margin: 0 0 8px !important;
+  text-align: center !important;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif !important;
+  font-size: 15px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+}
+
+.cv-hex-card p {
+  margin: 0 !important;
+  text-align: center !important;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif !important;
+  font-size: 13.5px !important;
+  font-style: normal !important;
+  line-height: 1.22 !important;
+}
+
+@media screen and (max-width: 850px) {
+  .cv-hex-skills {
+    flex-direction: column !important;
+    gap: 18px !important;
+  }
+
+  .cv-hex-card,
+  .cv-hex-card-large {
+    width: 285px !important;
+    height: 265px !important;
+  }
+
+  .cv-hex-card-large {
+    height: 295px !important;
+  }
+}
