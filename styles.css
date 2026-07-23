@@ -242,10 +242,10 @@ button {font-family: Georgia, Times, "Times New Roman", serif;font-size:16px;pad
 }
 
 .cv-hex-card {
+  position: relative !important;
   width: 275px !important;
   height: 245px !important;
-  background: #f7effb !important;
-  color: #140014 !important;
+  background: #140014 !important;
   clip-path: polygon(
     25% 0%,
     75% 0%,
@@ -263,37 +263,41 @@ button {font-family: Georgia, Times, "Times New Roman", serif;font-size:16px;pad
     0% 50%
   ) !important;
   display: flex !important;
-  flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  padding: 28px 42px !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
 }
 
-.cv-hex-card-large {
-  width: 325px !important;
-  height: 285px !important;
+.cv-hex-card::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #f7effb;
+  clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  -webkit-clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  z-index: 0;
 }
 
-.cv-hex-card h3 {
-  margin: 0 0 8px !important;
-  text-align: center !important;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif !important;
-  font-size: 15px !important;
-  font-style: normal !important;
-  font-weight: 700 !important;
-  line-height: 1.15 !important;
-}
-
+.cv-hex-card h3,
 .cv-hex-card p {
-  margin: 0 !important;
-  text-align: center !important;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif !important;
-  font-size: 13.5px !important;
-  font-style: normal !important;
-  line-height: 1.22 !important;
+  position: relative;
+  z-index: 1;
 }
-
 @media screen and (max-width: 850px) {
   .cv-hex-skills {
     flex-direction: column !important;
