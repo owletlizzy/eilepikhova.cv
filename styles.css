@@ -157,49 +157,62 @@ button {font-family: Georgia, Times, "Times New Roman", serif;font-size:16px;pad
 .container_lang {text-align: center;}
 .lang_prof {display:inline-block;text-align:center;list-style-type: none;padding:0;margin: 0;}
 
+.site-header {
+  text-align: center;
+}
+
+.profile-photo {
+  max-width: 320px;
+  width: 55%;
+  height: auto;
+  margin: 25px auto 35px;
+}
+
 .cv-top-skills {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 28px;
-  margin: 40px auto;
-  max-width: 1050px;
+  gap: 24px;
+  margin: 30px auto 10px;
+  max-width: 900px;
   text-align: center;
-  font-family: "Poppins", "Arial", sans-serif;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 .skill-shape {
-  background: #f3eafd;
-  color: #111;
+  background: #f7effb;
+  color: #140014;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: 22px;
   box-sizing: border-box;
 }
 
 .skill-shape h3 {
-  margin: 0 0 6px;
-  font-size: 16px;
+  margin: 0 0 7px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1.15;
 }
 
 .skill-shape p {
   margin: 0;
-  font-size: 15px;
-  line-height: 1.28;
+  text-align: center;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
 }
 
 .circle {
-  width: 245px;
-  height: 245px;
+  width: 235px;
+  height: 235px;
   border-radius: 50%;
 }
 
 .hexagon {
-  width: 305px;
-  height: 265px;
+  width: 290px;
+  height: 255px;
   clip-path: polygon(
     25% 0%,
     75% 0%,
@@ -211,9 +224,30 @@ button {font-family: Georgia, Times, "Times New Roman", serif;font-size:16px;pad
 }
 
 .hexagon-content {
-  max-width: 230px;
+  max-width: 220px;
 }
 
+/* Mobile */
+@media screen and (max-width: 850px) {
+  .cv-top-skills {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hexagon {
+    width: 290px;
+    height: 260px;
+  }
+
+  .skill-shape p {
+    font-size: 14px;
+  }
+}
 /* Mobile */
 @media (max-width: 850px) {
   .cv-top-skills {
