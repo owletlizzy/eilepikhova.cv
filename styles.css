@@ -615,3 +615,91 @@ button {
     text-align: center;
   }
 }
+
+.honors-awards {
+  position: relative;
+  background: #f6df9f;
+  margin: 0 -500%;
+  padding: 34px 500% 38px;
+  overflow: hidden;
+}
+
+.honors-awards::before {
+  content: "";
+  position: absolute;
+  inset: 12px 500%;
+  border: 3px solid transparent;
+  border-radius: 14px;
+  background:
+    linear-gradient(#f6df9f, #f6df9f) padding-box,
+    linear-gradient(
+      120deg,
+      #140014,
+      #fff7ff,
+      #d8a93d,
+      #fff2b8,
+      #140014
+    ) border-box;
+  background-size: 100% 100%, 300% 300%;
+  animation: glitter-border 5s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes glitter-border {
+  0% {
+    background-position: 0 0, 0% 50%;
+  }
+
+  100% {
+    background-position: 0 0, 300% 50%;
+  }
+}
+
+.honors-awards .content-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.sparkle {
+  position: absolute;
+  color: #140014;
+  font-size: 18px;
+  animation: sparkle-pulse 2.8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.sparkle-one {
+  top: 18px;
+  left: 8%;
+}
+
+.sparkle-two {
+  top: 22px;
+  right: 10%;
+  animation-delay: 0.6s;
+}
+
+.sparkle-three {
+  bottom: 22px;
+  left: 12%;
+  animation-delay: 1.2s;
+}
+
+.sparkle-four {
+  bottom: 24px;
+  right: 9%;
+  animation-delay: 1.8s;
+}
+
+@keyframes sparkle-pulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
