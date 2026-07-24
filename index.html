@@ -907,9 +907,9 @@
         ${popupEntries}
       `;
 
-      L.marker(place.coords)
-        .addTo(conferenceMap)
-        .bindPopup(popupContent);
+      L.marker(place.coords, { icon: purplePinIcon })
+  .addTo(conferenceMap)
+  .bindPopup(popupContent);
     });
   }
 </script>
