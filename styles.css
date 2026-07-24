@@ -1036,6 +1036,133 @@ button {
     padding: 14px;
   }
 
+  .map-gallery-section {
+  max-width: 980px;
+  margin: 46px auto;
+  text-align: center;
+}
+
+.map-gallery-section h2 {
+  margin: 0 0 28px;
+  text-align: center;
+  text-decoration: underline;
+  color: #140014;
+}
+
+.map-gallery-section h3 {
+  margin: 28px 0 18px;
+  text-align: center;
+  color: #140014;
+}
+
+.map-gallery-wrap {
+  position: relative;
+  max-width: 940px;
+  margin: 0 auto 36px;
+}
+
+.map-gallery-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 10px 12px 22px;
+  scrollbar-width: thin;
+  scrollbar-color: #6fa8dc #eef7ff;
+}
+
+.map-gallery-card {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  padding: 18px;
+  background: #eef7ff;
+  border: 3px solid #140014;
+  box-shadow: 5px 5px 0 #6fa8dc;
+  box-sizing: border-box;
+}
+
+.map-gallery-card h4 {
+  margin: 0 0 14px;
+  text-align: center;
+  color: #140014;
+}
+
+.map-gallery-card iframe {
+  display: block;
+  width: 100%;
+  border: 2px solid #140014;
+  background: white;
+}
+
+.vertical-map {
+  width: 330px;
+}
+
+.vertical-map iframe {
+  height: 460px;
+}
+
+.horizontal-map {
+  width: 620px;
+}
+
+.horizontal-map iframe {
+  height: 400px;
+}
+
+.map-gallery-card a {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 15px;
+  color: #140014;
+  text-decoration: underline;
+  background: transparent;
+}
+
+.map-gallery-button {
+  position: absolute;
+  top: 48%;
+  z-index: 2;
+  width: 36px;
+  height: 46px;
+  border: 2px solid #140014;
+  background: #d9ecff;
+  color: #140014;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.map-gallery-button.left {
+  left: -12px;
+}
+
+.map-gallery-button.right {
+  right: -12px;
+}
+
+.map-gallery-button:hover {
+  background: #bcdcff;
+}
+
+@media screen and (max-width: 750px) {
+  .vertical-map,
+  .horizontal-map {
+    width: 82vw;
+  }
+
+  .vertical-map iframe,
+  .horizontal-map iframe {
+    height: 420px;
+  }
+
+  .map-gallery-button {
+    display: none;
+  }
+}
+
   .gis-embed-card iframe {
     height: 420px;
   }
