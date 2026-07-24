@@ -908,3 +908,72 @@ button {
     animation-duration: 110s;
   }
 }
+.conference-map-section {
+  background: #eadbea;
+  padding: 42px 0 48px;
+  text-align: center;
+}
+
+.conference-map-section h2 {
+  margin: 0 0 14px;
+  text-decoration: underline;
+  color: #140014;
+}
+
+.conference-map-intro {
+  max-width: 700px;
+  margin: 0 auto 24px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #140014;
+}
+
+#conferenceMap {
+  width: 100%;
+  max-width: 900px;
+  height: 520px;
+  margin: 0 auto;
+  border: 3px solid #140014;
+  box-shadow: 6px 6px 0 #9b008f;
+}
+
+.leaflet-popup-content {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 14px;
+  line-height: 1.35;
+  color: #140014;
+}
+
+.conference-popup-title {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.conference-popup-entry {
+  margin-bottom: 12px;
+}
+
+.conference-popup-entry:last-child {
+  margin-bottom: 0;
+}
+
+.conference-additional {
+  max-width: 700px;
+  margin: 32px auto 0;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  color: #140014;
+}
+
+.conference-additional h3 {
+  margin: 0 0 14px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.conference-additional p {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.35;
+}
