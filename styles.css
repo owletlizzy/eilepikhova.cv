@@ -1298,7 +1298,7 @@ button {
 .creative-mosaic {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 180px 150px 150px 180px;
+  grid-template-rows: 180px 150px 115px 210px;
   gap: 18px;
   max-width: 980px;
   margin: 0 auto;
@@ -1347,18 +1347,18 @@ button {
   grid-row: 1 / 2;
 }
 
-/* Sky above mountain */
+/* Sky and mountain */
 .creative-sky {
   grid-column: 1 / 4;
-  grid-row: 2 / 3;
+  grid-row: 2 / 4;
 }
 
 .creative-mountain {
   grid-column: 1 / 4;
-  grid-row: 3 / 5;
+  grid-row: 4 / 5;
 }
 
-/* Right-side column */
+/* Right column */
 .creative-candle {
   grid-column: 4 / 5;
   grid-row: 2 / 3;
@@ -1367,6 +1367,27 @@ button {
 .creative-book {
   grid-column: 4 / 5;
   grid-row: 3 / 5;
+}
+
+/* Image crop tuning */
+.creative-youtube img {
+  object-position: center 72%;
+}
+
+.creative-sky img {
+  object-position: center 42%;
+}
+
+.creative-mountain img {
+  object-position: center 45%;
+}
+
+.creative-book img {
+  object-position: center 42%;
+}
+
+.creative-candle img {
+  object-position: center 55%;
 }
 
 @media screen and (max-width: 850px) {
