@@ -757,3 +757,52 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+
+.teaching-certificates-wrap {
+  max-width: 900px;
+  margin: 38px auto 0;
+  text-align: center;
+}
+
+.teaching-certificates-wrap h2 {
+  margin: 0 0 26px;
+  text-align: center;
+  text-decoration: underline;
+  color: #140014;
+}
+
+.certificate_item {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  max-width: 850px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.certificate_item .year {
+  text-align: center;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.cert_item {
+  text-align: left;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #140014;
+}
+
+@media screen and (max-width: 850px) {
+  .certificate_item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .cert_item {
+    text-align: center;
+  }
+}
