@@ -761,5 +761,27 @@
     </footer>
     </section>
     </main>
+    <script>
+  const reviewCarousel = document.getElementById("reviewCarousel");
+
+  if (reviewCarousel) {
+    let reviewScrollAmount = 1;
+
+    function autoScrollReviews() {
+      if (!reviewCarousel.matches(":hover")) {
+        reviewCarousel.scrollLeft += reviewScrollAmount;
+
+        if (
+          reviewCarousel.scrollLeft + reviewCarousel.clientWidth >=
+          reviewCarousel.scrollWidth - 2
+        ) {
+          reviewCarousel.scrollLeft = 0;
+        }
+      }
+    }
+
+    setInterval(autoScrollReviews, 35);
+  }
+</script>
   </body>
 </html>
