@@ -760,12 +760,26 @@ button {
 
 
 .teaching-certificates-box {
+  position: relative;
   max-width: 760px;
   margin: 40px auto;
-  padding: 42px 54px 34px;
-  border: 4px double #140014;
-  background: #eadbea;
+  padding: 46px 54px 38px;
   box-sizing: border-box;
+
+  /* no separate fill; lets the pink section background show through */
+  background: transparent;
+
+  /* thick outer black frame */
+  border: 3px solid #140014;
+}
+
+/* purple inner frame */
+.teaching-certificates-box::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 2px solid #9b008f;
+  pointer-events: none;
 }
 
 .teaching-certificates-box h2 {
@@ -773,6 +787,8 @@ button {
   text-align: center;
   text-decoration: underline;
   color: #140014;
+  position: relative;
+  z-index: 1;
 }
 
 .teaching-certificates-box .certificate_item {
@@ -783,6 +799,8 @@ button {
   max-width: 640px;
   margin: 0 auto;
   padding: 0 0 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .teaching-certificates-box .year {
@@ -802,19 +820,4 @@ button {
 
 .teaching-certificates-box .certificate_item:last-child {
   padding-bottom: 0;
-}
-
-@media screen and (max-width: 700px) {
-  .teaching-certificates-box {
-    padding: 32px 24px;
-  }
-
-  .teaching-certificates-box .certificate_item {
-    grid-template-columns: 1fr;
-    row-gap: 6px;
-  }
-
-  .teaching-certificates-box .cert_item {
-    text-align: center;
-  }
 }
