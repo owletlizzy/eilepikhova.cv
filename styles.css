@@ -1466,6 +1466,16 @@ button {
   fill: currentColor;
 }
 
+.contact-icons,
+.contact-icon-link {
+  position: relative;
+  z-index: 20;
+}
+
+.contact-icon-link {
+  pointer-events: auto;
+}
+
 .contact-icon-link:hover {
   transform: translate(-2px, -2px);
   box-shadow: 7px 7px 0 #9b008f;
