@@ -948,17 +948,77 @@ Placemaking, Belonging, and Activism.</i> Syracuse University Press.</li>
     });
   }
 </script>
-  <script>
-  function scrollMapGallery(galleryId, direction) {
-    const gallery = document.getElementById(galleryId);
+<script>
+  let currentMapOrbitIndex = 0;
 
-    if (gallery) {
-      gallery.scrollBy({
-        left: direction * gallery.clientWidth * 0.85,
-        behavior: "smooth"
+  function updateMapOrbit() {
+    const cards = document.querySelectorAll(".map-orbit-card");
+    const dots = document.querySelectorAll(".map-orbit-dot");
+    const total = cards.length;
+
+    cards.forEach(function(card, index) {
+      card.classList.remove(
+        "is-active",
+        "is-left",
+        "is-right",
+        "is-far-left",
+        "is-far-right"
+      );
+
+      const offset = (index - currentMapOrbitIndex + total) % total;
+
+      if (offset === 0) {
+        card.classList.add("is-active");
+      } else if (offset === 1) {
+        card.classList.add("is-right");
+      } else if (offset === total - 1) {
+        card.classList.add("is-left");
+      } else if (offset === 2) {
+        card.classList.add("is-far-right");
+      } else if (offset === total - 2) {
+        card.classList.add("is-far-left");
+      }
+    });
+
+    dots.forEach(function(dot, index) {
+      dot.classList.toggle("is-active", index === currentMapOrbitIndex);
+    });
+  }
+
+  function moveMapOrbit(direction) {
+    const cards = document.querySelectorAll(".map-orbit-card");
+    const total = cards.length;
+
+    currentMapOrbitIndex =
+      (currentMapOrbitIndex + direction + total) % total;
+
+    updateMapOrbit();
+  }
+
+  function goToMapOrbit(index) {
+    currentMapOrbitIndex = index;
+    updateMapOrbit();
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll(".map-orbit-card");
+    const dotsContainer = document.getElementById("mapOrbitDots");
+
+    if (dotsContainer) {
+      cards.forEach(function(_, index) {
+        const dot = document.createElement("button");
+        dot.className = "map-orbit-dot";
+        dot.type = "button";
+        dot.setAttribute("aria-label", "Go to map " + (index + 1));
+        dot.addEventListener("click", function() {
+          goToMapOrbit(index);
+        });
+        dotsContainer.appendChild(dot);
       });
     }
-  }
+
+    updateMapOrbit();
+  });
 </script>
   </body>
 </html>
