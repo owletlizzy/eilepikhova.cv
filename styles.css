@@ -979,5 +979,10 @@ button {
 }
 
 .purple-map-tiles {
-  filter: sepia(0.25) hue-rotate(230deg) saturate(0.55) brightness(1.1);
+  filter:
+    sepia(1)
+    hue-rotate(235deg)
+    saturate(2.8)
+    brightness(0.98)
+    contrast(0.95);
 }
