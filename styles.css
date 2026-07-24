@@ -1374,3 +1374,6 @@ button {
     grid-row: span 1;
   }
 }
+.creative-piece:not(.creative-piece-wide):not(.creative-piece-tall) {
+  aspect-ratio: 1 / 1;
+}
