@@ -1036,134 +1036,175 @@ button {
     padding: 14px;
   }
 
-  .map-gallery-section {
-  max-width: 980px;
-  margin: 46px auto;
+  .gis-embed-card iframe {
+    height: 420px;
+  }
+}
+
+.map-orbit-section {
+  max-width: 1000px;
+  margin: 48px auto;
   text-align: center;
 }
 
-.map-gallery-section h2 {
+.map-orbit-section h2 {
   margin: 0 0 28px;
   text-align: center;
   text-decoration: underline;
   color: #140014;
 }
 
-.map-gallery-section h3 {
-  margin: 28px 0 18px;
-  text-align: center;
-  color: #140014;
-}
-
-.map-gallery-wrap {
+.map-orbit {
   position: relative;
   max-width: 940px;
-  margin: 0 auto 36px;
+  height: 560px;
+  margin: 0 auto;
+  perspective: 1300px;
 }
 
-.map-gallery-track {
-  display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  padding: 10px 12px 22px;
-  scrollbar-width: thin;
-  scrollbar-color: #6fa8dc #eef7ff;
+.map-orbit-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.map-gallery-card {
-  flex: 0 0 auto;
-  scroll-snap-align: center;
-  padding: 18px;
+.map-orbit-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(680px, 74vw);
+  height: 520px;
+  padding: 14px;
   background: #eef7ff;
   border: 3px solid #140014;
-  box-shadow: 5px 5px 0 #6fa8dc;
+  box-shadow: 8px 8px 0 #6fa8dc;
   box-sizing: border-box;
+  opacity: 0;
+  transform: translateX(-50%) scale(0.72);
+  transition:
+    transform 0.55s ease,
+    opacity 0.55s ease,
+    filter 0.55s ease;
+  pointer-events: none;
 }
 
-.map-gallery-card h4 {
-  margin: 0 0 14px;
-  text-align: center;
-  color: #140014;
-}
-
-.map-gallery-card iframe {
+.map-orbit-card object {
   display: block;
   width: 100%;
+  height: 455px;
   border: 2px solid #140014;
   background: white;
 }
 
-.vertical-map {
-  width: 330px;
-}
-
-.vertical-map iframe {
-  height: 460px;
-}
-
-.horizontal-map {
-  width: 620px;
-}
-
-.horizontal-map iframe {
-  height: 400px;
-}
-
-.map-gallery-card a {
+.map-orbit-card a {
   display: inline-block;
   margin-top: 12px;
+  padding: 6px 16px;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 15px;
-  color: #140014;
-  text-decoration: underline;
-  background: transparent;
+  color: #f7effb;
+  background: #140014;
+  border: 2px solid #9b008f;
+  text-decoration: none;
 }
 
-.map-gallery-button {
-  position: absolute;
-  top: 48%;
+.map-orbit-card.is-active {
+  opacity: 1;
+  transform: translateX(-50%) scale(1) rotateY(0deg);
+  z-index: 5;
+  pointer-events: auto;
+}
+
+.map-orbit-card.is-left {
+  opacity: 0.55;
+  transform: translateX(-104%) scale(0.78) rotateY(20deg);
+  z-index: 3;
+  filter: saturate(0.8);
+}
+
+.map-orbit-card.is-right {
+  opacity: 0.55;
+  transform: translateX(4%) scale(0.78) rotateY(-20deg);
+  z-index: 3;
+  filter: saturate(0.8);
+}
+
+.map-orbit-card.is-far-left {
+  opacity: 0.22;
+  transform: translateX(-132%) scale(0.62) rotateY(30deg);
   z-index: 2;
-  width: 36px;
-  height: 46px;
-  border: 2px solid #140014;
+  filter: blur(1px) saturate(0.7);
+}
+
+.map-orbit-card.is-far-right {
+  opacity: 0.22;
+  transform: translateX(32%) scale(0.62) rotateY(-30deg);
+  z-index: 2;
+  filter: blur(1px) saturate(0.7);
+}
+
+.map-orbit-button {
+  position: absolute;
+  top: 43%;
+  z-index: 10;
+  width: 42px;
+  height: 54px;
+  border: 3px solid #140014;
   background: #d9ecff;
   color: #140014;
-  font-size: 30px;
+  font-size: 36px;
   line-height: 1;
   cursor: pointer;
+  box-shadow: 4px 4px 0 #6fa8dc;
 }
 
-.map-gallery-button.left {
-  left: -12px;
+.map-orbit-prev {
+  left: 0;
 }
 
-.map-gallery-button.right {
-  right: -12px;
+.map-orbit-next {
+  right: 0;
 }
 
-.map-gallery-button:hover {
+.map-orbit-button:hover {
   background: #bcdcff;
 }
 
-@media screen and (max-width: 750px) {
-  .vertical-map,
-  .horizontal-map {
-    width: 82vw;
-  }
-
-  .vertical-map iframe,
-  .horizontal-map iframe {
-    height: 420px;
-  }
-
-  .map-gallery-button {
-    display: none;
-  }
+.map-orbit-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
 }
 
-  .gis-embed-card iframe {
-    height: 420px;
+.map-orbit-dot {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #140014;
+  border-radius: 50%;
+  background: #eef7ff;
+  cursor: pointer;
+}
+
+.map-orbit-dot.is-active {
+  background: #6fa8dc;
+}
+
+@media screen and (max-width: 750px) {
+  .map-orbit {
+    height: 500px;
+  }
+
+  .map-orbit-card {
+    width: 78vw;
+    height: 460px;
+  }
+
+  .map-orbit-card object {
+    height: 395px;
+  }
+
+  .map-orbit-button {
+    display: none;
   }
 }
