@@ -822,13 +822,15 @@ button {
   padding-bottom: 0;
 }
 .review-carousel-section {
-  background: #ffd6e9;
-  padding: 34px 0 42px;
+  margin-top: 34px;
+  padding: 24px 0 4px;
+  background: transparent;
   text-align: center;
 }
 
-.review-carousel-section h2 {
-  margin: 0 0 24px;
+.review-carousel-section h3 {
+  margin: 0 0 18px;
+  text-align: center;
   text-decoration: underline;
   color: #140014;
 }
@@ -836,69 +838,11 @@ button {
 .review-carousel {
   display: flex;
   gap: 22px;
-  max-width: 900px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 8px 12px 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: #9b008f #eadbea;
-}
-
-.review-carousel::-webkit-scrollbar {
-  height: 8px;
-}
-
-.review-carousel::-webkit-scrollbar-track {
-  background: #eadbea;
-}
-
-.review-carousel::-webkit-scrollbar-thumb {
-  background: #9b008f;
-  border-radius: 999px;
-}
-
-.review-card {
-  flex: 0 0 520px;
-  min-height: 260px;
-  max-height: 360px;
-  padding: 24px 24px 20px;
-  background: #f7effb;
-  border: 3px solid #140014;
-  box-shadow: 4px 4px 0 #9b008f;
-  color: #140014;
-  text-decoration: none;
-  box-sizing: border-box;
-  overflow-y: auto;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.review-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 6px 6px 0 #9b008f;
-}
-
-.review-card p {
-  margin: 0 0 18px;
-  font-family: Georgia, Times, "Times New Roman", serif;
-  font-size: 15px;
-  line-height: 1.42;
-  text-align: left;
-  font-style: normal;
-}
-
-.review-card span {
-  display: block;
-  margin-top: 14px;
-  font-family: Georgia, Times, "Times New Roman", serif;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: right;
-}
-
-@media screen and (max-width: 700px) {
-  .review-card {
-    flex-basis: 82vw;
-    max-height: 430px;
-  }
 }
