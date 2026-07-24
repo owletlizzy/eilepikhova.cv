@@ -1209,3 +1209,88 @@ button {
     display: none;
   }
 }
+
+.teaching-gis-section {
+  background: #d9ecff;
+  margin: 0 -500%;
+  padding: 52px 500% 58px;
+  text-align: center;
+}
+
+.teaching-gis-section h2 {
+  margin: 0 0 18px;
+  text-align: center;
+  text-decoration: underline;
+  color: #140014;
+}
+
+.teaching-gis-intro {
+  max-width: 760px;
+  margin: 0 auto 34px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  line-height: 1.45;
+  color: #140014;
+}
+
+.teaching-gis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 28px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.teaching-gis-card {
+  background: #eef7ff;
+  border: 3px solid #140014;
+  box-shadow: 6px 6px 0 #6fa8dc;
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.storymap-frame {
+  width: 100%;
+  height: 430px;
+  border: 2px solid #140014;
+  background: white;
+  overflow: hidden;
+}
+
+.storymap-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.teaching-gis-links {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.teaching-gis-links a {
+  display: inline-block;
+  padding: 7px 18px;
+  color: #f7effb;
+  background: #140014;
+  border: 2px solid #9b008f;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+}
+
+.teaching-gis-links a:hover {
+  background: #332834;
+}
+
+@media screen and (max-width: 850px) {
+  .teaching-gis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .storymap-frame {
+    height: 380px;
+  }
+}
