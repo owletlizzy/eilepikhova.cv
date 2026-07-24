@@ -986,3 +986,57 @@ button {
     brightness(0.98)
     contrast(0.95);
 }
+
+.gis-projects-section {
+  background: #d9ecff;
+  margin: 0 -500%;
+  padding: 42px 500% 52px;
+  text-align: center;
+}
+
+.gis-projects-section h2 {
+  margin: 0 0 28px;
+  text-align: center;
+  text-decoration: underline;
+  color: #140014;
+}
+
+.gis-embed-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 34px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.gis-embed-card {
+  padding: 22px;
+  background: #eef7ff;
+  border: 3px solid #140014;
+  box-shadow: 6px 6px 0 #6fa8dc;
+  box-sizing: border-box;
+}
+
+.gis-embed-card h3 {
+  margin: 0 0 16px;
+  text-align: center;
+  color: #140014;
+}
+
+.gis-embed-card iframe {
+  display: block;
+  width: 100%;
+  height: 560px;
+  border: 2px solid #140014;
+  background: white;
+}
+
+@media screen and (max-width: 750px) {
+  .gis-embed-card {
+    padding: 14px;
+  }
+
+  .gis-embed-card iframe {
+    height: 420px;
+  }
+}
