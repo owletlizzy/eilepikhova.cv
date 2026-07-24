@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elizaveta (Liz) Lepikhova: social justice educator, GIS enthusiast, versatile artist</title>
     <link rel="stylesheet" href="styles.css">
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
   </head>
   <body>
     <main>
@@ -271,6 +279,23 @@
       </li>
     </ul>
   </div>
+        <section class="conference-map-section">
+  <div class="content-wrap">
+    <h2>Conference Geography</h2>
+
+    <p class="conference-map-intro">
+      Places where I have presented, spoken, or participated in scholarly conversations.
+    </p>
+
+    <div id="conferenceMap"></div>
+
+    <div class="conference-additional">
+      <h3>Additional Conferences</h3>
+      <p><b>2021</b> Participant at the ASA conference</p>
+      <p><b>2019</b> Participant at the conference “Equity in the Classroom”</p>
+    </div>
+  </div>
+</section>
 </div>
 
               
@@ -788,5 +813,96 @@
     </footer>
     </section>
     </main>
+            <script>
+  const conferenceMapElement = document.getElementById("conferenceMap");
+
+  if (conferenceMapElement) {
+    const conferenceMap = L.map("conferenceMap").setView([45, -35], 2);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 18,
+      attribution: "&copy; OpenStreetMap contributors"
+    }).addTo(conferenceMap);
+
+    const conferenceCities = [
+      {
+        city: "Cambridge, MA",
+        coords: [42.3736, -71.1097],
+        entries: [
+          {
+            year: "2026",
+            role: "Presenter with Dr. Daria Dementeva",
+            conference: "Harvard",
+            title: "Historical Geodata Digitization with Vision-Language Models: Reconstructing Neighborhood Property Values and the Geography of Racially Restrictive Covenants in Twentieth-Century Milwaukee."
+          }
+        ]
+      },
+      {
+        city: "Milwaukee, WI",
+        coords: [43.0389, -87.9065],
+        entries: [
+          {
+            year: "2026",
+            role: "Presenter",
+            conference: "NACIS Conference",
+            title: "Resurrecting Historical Geodata: A Vision-Language Model Approach to Integrating Property Assessment Records and Census Geographies"
+          }
+        ]
+      },
+      {
+        city: "New York City, NY",
+        coords: [40.7128, -74.0060],
+        entries: [
+          {
+            year: "2026",
+            role: "Presenter",
+            conference: "ASA Conference",
+            title: ""
+          }
+        ]
+      },
+      {
+        city: "Moscow, Russia",
+        coords: [55.7558, 37.6173],
+        entries: [
+          {
+            year: "2018",
+            role: "Presenter with Prof. Balashova G.K.",
+            conference: "",
+            title: "Interiorization of Social Darwinism Ideology"
+          },
+          {
+            year: "2017",
+            role: "Speaker",
+            conference: "Conference of Young Scientists “Alliance of Social Sciences”",
+            title: "Tattoo as a Rite of Passage"
+          }
+        ]
+      }
+    ];
+
+    conferenceCities.forEach(function(place) {
+      const popupEntries = place.entries.map(function(entry) {
+        return `
+          <div class="conference-popup-entry">
+            <b>${entry.year}</b><br>
+            ${entry.role}<br>
+            ${entry.conference ? `<i>${entry.conference}</i><br>` : ""}
+            ${entry.title ? `“${entry.title}”` : ""}
+          </div>
+        `;
+      }).join("");
+
+      const popupContent = `
+        <div class="conference-popup-title">${place.city}</div>
+        ${popupEntries}
+      `;
+
+      L.marker(place.coords)
+        .addTo(conferenceMap)
+        .bindPopup(popupContent);
+    });
+  }
+</script>
   </body>
 </html>
