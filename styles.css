@@ -1302,6 +1302,7 @@ button {
   gap: 18px;
   max-width: 980px;
   margin: 0 auto;
+  grid-auto-flow: dense;
 }
 
 .creative-piece {
@@ -1314,6 +1315,7 @@ button {
   box-sizing: border-box;
   color: #140014;
   text-decoration: none;
+  aspect-ratio: auto;
   transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
 
@@ -1345,7 +1347,7 @@ button {
   grid-row: 1 / 2;
 }
 
-/* Main travel column */
+/* Sky above mountain */
 .creative-sky {
   grid-column: 1 / 4;
   grid-row: 2 / 3;
@@ -1356,7 +1358,7 @@ button {
   grid-row: 3 / 5;
 }
 
-/* Right column */
+/* Right-side column */
 .creative-candle {
   grid-column: 4 / 5;
   grid-row: 2 / 3;
