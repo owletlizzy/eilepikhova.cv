@@ -1429,3 +1429,50 @@ button {
     grid-column: span 1;
   }
 }
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 30px auto 12px;
+}
+
+.contact-icon-link {
+  width: 78px;
+  height: 78px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: #140014;
+  color: #f7effb;
+  border: 2px solid #9b008f;
+  border-radius: 50%;
+  box-shadow: 4px 4px 0 #9b008f;
+  text-decoration: none;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+.contact-icon-link svg {
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
+}
+
+.contact-icon-link:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 #9b008f;
+  background: #332834;
+}
+
+.contact-icon-link:focus {
+  outline: 3px solid #f7effb;
+  outline-offset: 4px;
+}
