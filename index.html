@@ -944,5 +944,17 @@ Placemaking, Belonging, and Activism.</i> Syracuse University Press.</li>
     });
   }
 </script>
+  <script>
+  function scrollMapGallery(galleryId, direction) {
+    const gallery = document.getElementById(galleryId);
+
+    if (gallery) {
+      gallery.scrollBy({
+        left: direction * gallery.clientWidth * 0.85,
+        behavior: "smooth"
+      });
+    }
+  }
+</script>
   </body>
 </html>
