@@ -826,6 +826,7 @@ button {
   padding: 24px 0 4px;
   background: transparent;
   text-align: center;
+  overflow: hidden;
 }
 
 .review-carousel-section h3 {
@@ -835,14 +836,82 @@ button {
   color: #140014;
 }
 
-.review-carousel {
+.review-marquee {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0 22px;
+}
+
+.review-marquee-track {
   display: flex;
-  gap: 22px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 8px 12px 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: #9b008f #eadbea;
+  gap: 24px;
+  width: max-content;
+  animation: review-auto-scroll 85s linear infinite;
+}
+
+.review-marquee:hover .review-marquee-track {
+  animation-play-state: paused;
+}
+
+.review-card,
+.review-card:visited {
+  flex: 0 0 520px;
+  height: 340px;
+  padding: 24px 24px 20px;
+  background: #f7effb;
+  border: 3px solid #140014;
+  box-shadow: 4px 4px 0 #9b008f;
+  color: #140014;
+  text-decoration: none;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 6px 6px 0 #9b008f;
+}
+
+.review-card p {
+  margin: 0 0 18px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1.42;
+  text-align: left;
+  font-style: normal;
+  color: #140014;
+  text-decoration: none;
+}
+
+.review-card span {
+  display: block;
+  margin-top: 14px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+  color: #140014;
+  text-decoration: none;
+}
+
+@keyframes review-auto-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .review-card,
+  .review-card:visited {
+    flex-basis: 82vw;
+    height: 410px;
+  }
+
+  .review-marquee-track {
+    animation-duration: 95s;
+  }
 }
