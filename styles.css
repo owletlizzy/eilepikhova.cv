@@ -759,36 +759,40 @@ button {
 }
 
 
-.teaching-certificates-wrap {
-  max-width: 900px;
-  margin: 38px auto 0;
-  text-align: center;
+.teaching-certificates-box {
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 42px 54px 34px;
+  border: 4px double #140014;
+  background: #eadbea;
+  box-sizing: border-box;
 }
 
-.teaching-certificates-wrap h2 {
-  margin: 0 0 26px;
+.teaching-certificates-box h2 {
+  margin: 0 0 20px;
   text-align: center;
   text-decoration: underline;
   color: #140014;
 }
 
-.certificate_item {
+.teaching-certificates-box .certificate_item {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  align-items: center;
-  max-width: 850px;
+  grid-template-columns: 140px minmax(0, 1fr);
+  column-gap: 18px;
+  align-items: start;
+  max-width: 640px;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding: 0 0 20px;
 }
 
-.certificate_item .year {
+.teaching-certificates-box .year {
   text-align: center;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 16px;
   line-height: 20px;
 }
 
-.cert_item {
+.teaching-certificates-box .cert_item {
   text-align: left;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 16px;
@@ -796,13 +800,21 @@ button {
   color: #140014;
 }
 
-@media screen and (max-width: 850px) {
-  .certificate_item {
-    grid-template-columns: 1fr;
-    gap: 8px;
+.teaching-certificates-box .certificate_item:last-child {
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .teaching-certificates-box {
+    padding: 32px 24px;
   }
 
-  .cert_item {
+  .teaching-certificates-box .certificate_item {
+    grid-template-columns: 1fr;
+    row-gap: 6px;
+  }
+
+  .teaching-certificates-box .cert_item {
     text-align: center;
   }
 }
