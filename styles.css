@@ -1204,6 +1204,25 @@ button {
     font-size: 30px;
   }
 }
+.map-orbit-card img {
+  width: 100%;
+  height: 425px;
+  object-fit: contain;
+  object-position: center;
+  background: white;
+  border: 2px solid #140014;
+}
+
+/* Use this class for portrait/vertical maps */
+.map-orbit-card.map-vertical img {
+  width: auto;
+  max-width: 100%;
+  height: 425px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+
 .teaching-gis-section {
   background: #d9ecff;
   margin: 0 -500%;
