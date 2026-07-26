@@ -1018,9 +1018,16 @@ button {
 }
 
 .gis-embed-card h3 {
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   text-align: center;
   color: #140014;
+}
+
+.gis-embed-card p {
+  max-width: 760px;
+  margin: 0 auto 18px;
+  color: #140014;
+  line-height: 1.45;
 }
 
 .gis-embed-card iframe {
@@ -1029,9 +1036,34 @@ button {
   height: 560px;
   border: 2px solid #140014;
   background: white;
+  box-sizing: border-box;
+}
+
+.gis-open-link {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 9px 20px;
+  color: #f7effb;
+  background: #140014;
+  border: 2px solid #9b008f;
+  border-radius: 5px;
+  box-shadow: 3px 3px 0 #9b008f;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.gis-open-link:hover {
+  background: #332834;
 }
 
 @media screen and (max-width: 750px) {
+  .gis-projects-section {
+    padding-top: 36px;
+    padding-bottom: 44px;
+  }
+
   .gis-embed-card {
     padding: 14px;
   }
@@ -1039,8 +1071,12 @@ button {
   .gis-embed-card iframe {
     height: 420px;
   }
-}
 
+  .gis-open-link {
+    font-size: 16px;
+    padding: 9px 18px;
+  }
+}
 .map-orbit-section {
   max-width: 1000px;
   margin: 48px auto;
