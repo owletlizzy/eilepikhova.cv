@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elizaveta (Liz) Lepikhova: social justice educator, GIS enthusiast, versatile artist</title>
+    <title>Elizaveta (Liz) Lepikhova: Social Justice Educator, GIS Enthusiast, Versatile Artist</title>
     <link rel="stylesheet" href="styles.css">
     <link
   rel="stylesheet"
@@ -222,9 +222,10 @@
 
   <div class="published">
     <ul id="published">
-     <li>Lepikhova, E. (2026). Locations of major Islamic centers and organizations in Milwaukee [Map].
+     <li>
+       <b>2026</b> &nbsp;Lepikhova, E. (2026). Locations of major Islamic centers and organizations in Milwaukee [Map].
 In A. M. McGinty, C. Seymour-Jorn, & K. M. Sziarto, <i>Muslims in Milwaukee:
-Placemaking, Belonging, and Activism.</i> Syracuse University Press.</li>
+Placemaking, Belonging, and Activism.<br></i> Syracuse University Press.</li>
       
       <li>
         <b>2021</b> &nbsp; Lepikhova, E. (2021). Podcast review: Give Theory a Chance.
@@ -916,29 +917,36 @@ Placemaking, Belonging, and Activism.</i> Syracuse University Press.</li>
         <section class="footer">
           <br>
 
-          <section class="two-truths-section">
-  <div class="content-wrap">
+          <section class="truth-quiz-section">
+  <div class="truth-quiz-intro">
     <h2>Try Your Luck and Get to Know me Better</h2>
+    <p>Two are lies. One is real.</p>
+    <p>Can you guess where the truth lies? *pun intended*</p>
+  </div>
 
-    <p class="two-truths-intro">
-      Two are lies. One is real. <br> Can you guess where the truth lies? *pun intended*
-    </p>
+  <div class="truth-quiz-card">
+    <div class="truth-question">
+      Which statement is true?
+    </div>
 
-    <div class="truth-card-grid">
-      <button class="truth-card" type="button" onclick="revealTruth(this, true)">
-        I can talk like a dolphin.
+    <div class="truth-options">
+      <button class="truth-option" type="button" onclick="revealTruth(this, true)">
+        <span class="truth-letter">A.</span>
+        <span>I can talk like a dolphin.</span>
       </button>
 
-      <button class="truth-card" type="button" onclick="revealTruth(this, false)">
-        I have a sister that looks nothing like me.
+      <button class="truth-option" type="button" onclick="revealTruth(this, false)">
+        <span class="truth-letter">B.</span>
+        <span>I have a sister that looks nothing like me.</span>
       </button>
 
-      <button class="truth-card" type="button" onclick="revealTruth(this, false)">
-        My favorite color is burgundy.
+      <button class="truth-option" type="button" onclick="revealTruth(this, false)">
+        <span class="truth-letter">C.</span>
+        <span>My favorite color is burgundy.</span>
       </button>
     </div>
 
-    <p class="truth-result" id="truthResult" aria-live="polite"></p>
+    <p id="truthResult" class="truth-result" aria-live="polite"></p>
   </div>
 </section>
           
@@ -1169,39 +1177,35 @@ Placemaking, Belonging, and Activism.</i> Syracuse University Press.</li>
     updateMapOrbit();
   });
 </script>
-        <script>
+    <script>
   function revealTruth(button, isTruth) {
-    const cards = document.querySelectorAll(".truth-card");
+    const options = document.querySelectorAll(".truth-option");
     const result = document.getElementById("truthResult");
     const answer = button.textContent.trim();
 
-    cards.forEach(function(card) {
-      card.classList.remove("correct", "incorrect");
+    options.forEach(function(option) {
+      option.classList.remove("correct", "incorrect");
     });
 
     if (isTruth) {
       button.classList.add("correct");
-
-      const message = "Yes. I can talk like a dolphin, and this has been my favorite party trick since middle school!";
-      result.textContent = message;
-      alert(message);
+      result.textContent = "Yes. I can talk like a dolphin, and this has been my favorite party trick since middle school.";
       return;
     }
 
     button.classList.add("incorrect");
 
-    let message = "Nope. This one is a lie.";
-
     if (answer.includes("sister")) {
-      message = "No. I do not have a sister, but I do have a best friend who pursues her dreams in Japan, and we get mistaken for sisters (although we look nothing alike)!";
+      result.textContent = "No. I do not have a sister, but I do have a best friend who pursues her dreams in Japan, and we get mistaken for sisters.";
+      return;
     }
 
     if (answer.includes("burgundy")) {
-      message = "Close. It is my husband's favorite color! The amount of purple on this page should be a clue:)";
+      result.textContent = "No. This is my husband's favorite color.";
+      return;
     }
 
-    result.textContent = message;
-    alert(message);
+    result.textContent = "Nope. This one is a lie.";
   }
 </script>
   </body>
