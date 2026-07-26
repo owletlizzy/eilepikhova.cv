@@ -1042,7 +1042,7 @@ button {
 }
 
 .map-orbit-section {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 48px auto;
   text-align: center;
 }
@@ -1056,12 +1056,10 @@ button {
 
 .map-orbit {
   position: relative;
-  width: 100%;
-  max-width: 1050px;
-  height: 720px;
+  max-width: 940px;
+  height: 560px;
   margin: 0 auto;
   perspective: 1300px;
-  overflow: visible;
 }
 
 .map-orbit-stage {
@@ -1074,8 +1072,8 @@ button {
   position: absolute;
   top: 0;
   left: 50%;
-  width: min(840px, 86vw);
-  height: 650px;
+  width: min(680px, 74vw);
+  height: 500px;
   padding: 14px;
   background: #eef7ff;
   border: 3px solid #140014;
@@ -1087,25 +1085,26 @@ button {
   pointer-events: none;
 }
 
-.map-orbit-card iframe,
-.map-orbit-card object {
+.map-orbit-card img {
   display: block;
   width: 100%;
-  height: 580px;
-  border: 2px solid #140014;
+  height: 425px;
+  object-fit: contain;
   background: white;
+  border: 2px solid #140014;
 }
 
 .map-orbit-card a {
   display: inline-block;
   margin-top: 12px;
-  padding: 6px 16px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 15px;
+  padding: 7px 18px;
   color: #f7effb;
   background: #140014;
   border: 2px solid #9b008f;
+  border-radius: 4px;
   text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
 }
 
 .map-orbit-card.is-active {
@@ -1116,58 +1115,44 @@ button {
 }
 
 .map-orbit-card.is-left {
-  opacity: 0.35;
-  transform: translateX(-102%) scale(0.7) rotateY(18deg);
+  opacity: 0.42;
+  transform: translateX(-104%) scale(0.72) rotateY(18deg);
   z-index: 3;
-  filter: saturate(0.75);
 }
 
 .map-orbit-card.is-right {
-  opacity: 0.35;
-  transform: translateX(2%) scale(0.7) rotateY(-18deg);
+  opacity: 0.42;
+  transform: translateX(4%) scale(0.72) rotateY(-18deg);
   z-index: 3;
-  filter: saturate(0.75);
 }
 
-.map-orbit-card.is-far-left {
-  opacity: 0.12;
-  transform: translateX(-128%) scale(0.55) rotateY(28deg);
-  z-index: 2;
-  filter: blur(1px) saturate(0.7);
-}
-
+.map-orbit-card.is-far-left,
 .map-orbit-card.is-far-right {
-  opacity: 0.12;
-  transform: translateX(28%) scale(0.55) rotateY(-28deg);
-  z-index: 2;
-  filter: blur(1px) saturate(0.7);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .map-orbit-button {
   position: absolute;
-  top: 43%;
+  top: 40%;
   z-index: 10;
-  width: 44px;
-  height: 58px;
+  width: 42px;
+  height: 54px;
   border: 3px solid #140014;
   background: #d9ecff;
   color: #140014;
-  font-size: 38px;
+  font-size: 36px;
   line-height: 1;
   cursor: pointer;
   box-shadow: 4px 4px 0 #6fa8dc;
 }
 
 .map-orbit-prev {
-  left: 6px;
+  left: 8px;
 }
 
 .map-orbit-next {
-  right: 6px;
-}
-
-.map-orbit-button:hover {
-  background: #bcdcff;
+  right: 8px;
 }
 
 .map-orbit-dots {
@@ -1192,131 +1177,33 @@ button {
 
 @media screen and (max-width: 750px) {
   .map-orbit {
-    height: 560px;
-  }
-
-  .map-orbit-card {
-    width: 86vw;
-    height: 500px;
-  }
-
-  .map-orbit-card iframe,
-  .map-orbit-card object {
-    height: 430px;
-  }
-
-  .map-orbit-button {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .map-orbit-section {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .map-orbit {
-    width: 100%;
-    max-width: 100%;
-    height: 430px;
-    overflow: hidden;
+    height: 390px;
     perspective: none;
-  }
-
-  .map-orbit-stage {
-    width: 100%;
-    height: 100%;
+    overflow: hidden;
   }
 
   .map-orbit-card {
-    top: 0;
-    left: 50%;
-    width: min(88vw, 360px);
-    height: 360px;
-    padding: 18px;
-    transform: translateX(-50%) scale(0.85);
-    opacity: 0;
-    box-shadow: 6px 6px 0 #6fa8dc;
+    width: min(84vw, 340px);
+    height: 330px;
   }
 
-  .map-orbit-card.is-active {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
-    z-index: 5;
-    pointer-events: auto;
+  .map-orbit-card img {
+    height: 250px;
   }
 
   .map-orbit-card.is-left,
-  .map-orbit-card.is-right,
-  .map-orbit-card.is-far-left,
-  .map-orbit-card.is-far-right {
+  .map-orbit-card.is-right {
     opacity: 0;
-    transform: translateX(-50%) scale(0.85);
     pointer-events: none;
   }
 
-  .map-orbit-card iframe,
-  .map-orbit-card object,
-  .map-orbit-card embed {
-    display: none !important;
-  }
-
-  .map-orbit-card::before {
-    content: "PDF Map";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 250px;
-    margin-bottom: 18px;
-    background:
-      linear-gradient(135deg, rgba(217, 236, 255, 0.95), rgba(247, 239, 251, 0.95)),
-      repeating-linear-gradient(
-        45deg,
-        rgba(20, 0, 20, 0.08) 0,
-        rgba(20, 0, 20, 0.08) 2px,
-        transparent 2px,
-        transparent 10px
-      );
-    border: 3px solid #140014;
-    box-sizing: border-box;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 26px;
-    font-weight: bold;
-    color: #140014;
-    text-align: center;
-  }
-
-  .map-orbit-card a {
-    display: inline-block !important;
-    margin: 0 auto !important;
-    padding: 8px 18px !important;
-    font-size: 17px !important;
-  }
-
   .map-orbit-button {
-    display: block;
-    top: 42%;
-    width: 38px;
-    height: 48px;
-    font-size: 32px;
-    background: #eef7ff;
-  }
-
-  .map-orbit-prev {
-    left: 8px;
-  }
-
-  .map-orbit-next {
-    right: 8px;
-  }
-
-  .map-orbit-dots {
-    margin-top: 8px;
+    top: 36%;
+    width: 36px;
+    height: 46px;
+    font-size: 30px;
   }
 }
-
 .teaching-gis-section {
   background: #d9ecff;
   margin: 0 -500%;
