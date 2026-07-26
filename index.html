@@ -81,9 +81,11 @@
       <h3>Software Experience</h3>
       <p>
         R/RStudio, Stata,<br>
-        SPSS, Python,<br>
+        SPSS, Python, <br>
+        NVivo, ATLAS.ti<br>
         ArcGIS, QGIS,<br>
-        HTML, CSS, Git, GitHub,<br>
+        HTML, CSS, JavaScript, <br>
+        Git, GitHub,<br>
         Microsoft Office, Canva,<br>
         Zoom, Teams
       </p>
@@ -857,7 +859,9 @@ Placemaking, Belonging, and Activism.</i> Syracuse University Press.</li>
              <section class="creative-mosaic-section">
   <div class="content-wrap">
     <h2>Beyond the Veil of Academia</h2>
-    <p>Outside of academia I adore reading books, play board games, travel, play music and write poetry! <br> Please click on links on top if you are interested to hear some of my art!</p>
+    <p>Outside of academia I adore reading books, playing board games, going to museums and traveling.
+      <br> I also play music and write poetry! <br> Please click on links on top if you are interested to hear some of my art!</p>
+    
 
     <div class="creative-mosaic creative-mosaic-arranged">
 
@@ -911,6 +915,33 @@ Placemaking, Belonging, and Activism.</i> Syracuse University Press.</li>
       <div class="content-wrap">
         <section class="footer">
           <br>
+
+          <section class="two-truths-section">
+  <div class="content-wrap">
+    <h2>Find the Truth</h2>
+
+    <p class="two-truths-intro">
+      Two are lies. One is real.
+    </p>
+
+    <div class="truth-card-grid">
+      <button class="truth-card" type="button" onclick="revealTruth(this, true)">
+        I can talk like a dolphin.
+      </button>
+
+      <button class="truth-card" type="button" onclick="revealTruth(this, false)">
+        I have a sister that looks nothing like me.
+      </button>
+
+      <button class="truth-card" type="button" onclick="revealTruth(this, false)">
+        My favorite color is burgundy.
+      </button>
+    </div>
+
+    <p class="truth-result" id="truthResult" aria-live="polite"></p>
+  </div>
+</section>
+          
         <h2> Want to learn more about me? </h2>
         <p> Feel free to download the latest version of my resume below:
           <br>
@@ -1137,6 +1168,41 @@ Placemaking, Belonging, and Activism.</i> Syracuse University Press.</li>
 
     updateMapOrbit();
   });
+</script>
+        <script>
+  function revealTruth(button, isTruth) {
+    const cards = document.querySelectorAll(".truth-card");
+    const result = document.getElementById("truthResult");
+    const answer = button.textContent.trim();
+
+    cards.forEach(function(card) {
+      card.classList.remove("correct", "incorrect");
+    });
+
+    if (isTruth) {
+      button.classList.add("correct");
+
+      const message = "Yes. I can talk like a dolphin, and this has been my favorite party trick since middle school.";
+      result.textContent = message;
+      alert(message);
+      return;
+    }
+
+    button.classList.add("incorrect");
+
+    let message = "Nope. This one is a lie.";
+
+    if (answer.includes("sister")) {
+      message = "No. I do not have a sister, but I do have a best friend who pursues her dreams in Japan, and we get mistaken for sisters.";
+    }
+
+    if (answer.includes("burgundy")) {
+      message = "No. This is my husband's favorite color.";
+    }
+
+    result.textContent = message;
+    alert(message);
+  }
 </script>
   </body>
 </html>
