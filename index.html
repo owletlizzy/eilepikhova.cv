@@ -1048,7 +1048,15 @@ Placemaking, Belonging, and Activism.<br></i> Syracuse University Press.</li>
   const conferenceMapElement = document.getElementById("conferenceMap");
 
   if (conferenceMapElement) {
-    const conferenceMap = L.map("conferenceMap").setView([45, -35], 2);
+    const conferenceMap = L.map("conferenceMap", {
+  scrollWheelZoom: false,
+  dragging: true,
+  tap: true
+}).setView([42, -35], 2);
+    conferenceMap.touchZoom.enable();
+  conferenceMap.doubleClickZoom.enable();
+  conferenceMap.boxZoom.disable();
+  conferenceMap.keyboard.disable();
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 18,
