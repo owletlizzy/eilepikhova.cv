@@ -917,36 +917,33 @@ Placemaking, Belonging, and Activism.<br></i> Syracuse University Press.</li>
         <section class="footer">
           <br>
 
-          <section class="truth-quiz-section">
-  <div class="truth-quiz-intro">
+          <section class="get-to-know-section">
+  <div class="get-to-know-intro">
     <h2>Try Your Luck and Get to Know me Better</h2>
     <p>Two are lies. One is real.</p>
     <p>Can you guess where the truth lies? *pun intended*</p>
   </div>
 
-  <div class="truth-quiz-card">
-    <div class="truth-question">
+  <div class="get-to-know-quiz">
+    <div class="get-to-know-question">
       Which statement is true?
     </div>
 
-    <div class="truth-options">
-      <button class="truth-option" type="button" onclick="revealTruth(this, true)">
-        <span class="truth-letter">A.</span>
-        <span>I can talk like a dolphin.</span>
+    <div class="get-to-know-options">
+      <button class="get-to-know-option" type="button" onclick="revealTruth(this, true)">
+        <span>A.</span> I can talk like a dolphin.
       </button>
 
-      <button class="truth-option" type="button" onclick="revealTruth(this, false)">
-        <span class="truth-letter">B.</span>
-        <span>I have a sister that looks nothing like me.</span>
+      <button class="get-to-know-option" type="button" onclick="revealTruth(this, false)">
+        <span>B.</span> I have a sister that looks nothing like me.
       </button>
 
-      <button class="truth-option" type="button" onclick="revealTruth(this, false)">
-        <span class="truth-letter">C.</span>
-        <span>My favorite color is burgundy.</span>
+      <button class="get-to-know-option" type="button" onclick="revealTruth(this, false)">
+        <span>C.</span> My favorite color is burgundy.
       </button>
     </div>
 
-    <p id="truthResult" class="truth-result" aria-live="polite"></p>
+    <p id="truthResult" class="get-to-know-result" aria-live="polite"></p>
   </div>
 </section>
           
@@ -1177,9 +1174,9 @@ Placemaking, Belonging, and Activism.<br></i> Syracuse University Press.</li>
     updateMapOrbit();
   });
 </script>
-    <script>
+   <script>
   function revealTruth(button, isTruth) {
-    const options = document.querySelectorAll(".truth-option");
+    const options = document.querySelectorAll(".get-to-know-option");
     const result = document.getElementById("truthResult");
     const answer = button.textContent.trim();
 
