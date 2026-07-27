@@ -1999,8 +1999,9 @@ button {
 }
 
 .brace-schema-section {
-  background: #efedf5;
-  padding: 56px 20px 64px;
+  background: transparent;
+  padding: 0;
+  margin: 0;
   text-align: center;
 }
 
