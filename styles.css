@@ -2038,43 +2038,48 @@ button {
   height: 3px;
   background: #140014;
   border-radius: 999px;
-  opacity: 0.85;
+  opacity: 0.8;
   transform-origin: left center;
 }
 
+/* B to core */
 .line-bravery {
-  width: 105px;
-  left: 270px;
-  top: 235px;
+  width: 155px;
+  left: 220px;
+  top: 225px;
   transform: rotate(-1deg);
 }
 
+/* core to E */
 .line-empathy {
-  width: 105px;
+  width: 155px;
   left: 805px;
-  top: 235px;
+  top: 225px;
   transform: rotate(1deg);
 }
 
+/* core to R */
 .line-reflection {
-  width: 165px;
-  left: 465px;
-  top: 365px;
-  transform: rotate(132deg);
+  width: 145px;
+  left: 420px;
+  top: 345px;
+  transform: rotate(130deg);
 }
 
+/* core to A */
 .line-application {
-  width: 95px;
+  width: 115px;
   left: 590px;
-  top: 370px;
+  top: 365px;
   transform: rotate(90deg);
 }
 
+/* core to C */
 .line-creativity {
-  width: 165px;
-  left: 650px;
-  top: 365px;
-  transform: rotate(48deg);
+  width: 145px;
+  left: 760px;
+  top: 345px;
+  transform: rotate(50deg);
 }
 
 /* Circles */
@@ -2154,17 +2159,17 @@ button {
 /* Circle placement */
 
 .bravery {
-  left: 15px;
-  top: 135px;
+  left: 25px;
+  top: 130px;
 }
 
 .empathy {
-  right: 15px;
-  top: 135px;
+  right: 25px;
+  top: 130px;
 }
 
 .reflection {
-  left: 115px;
+  left: 130px;
   top: 390px;
 }
 
@@ -2175,7 +2180,7 @@ button {
 }
 
 .creativity {
-  right: 115px;
+  right: 130px;
   top: 390px;
 }
 
