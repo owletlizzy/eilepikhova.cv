@@ -1714,6 +1714,7 @@ button {
   }
 }
 
+
 .memberships-section {
   background: #efedf5;
   margin: 0 -500%;
@@ -1784,13 +1785,13 @@ button {
   cursor: pointer;
   overflow: hidden;
   background: conic-gradient(
-    #e52421 0deg 51.43deg,
-    #4ba3d3 51.43deg 102.86deg,
-    #f8efd9 102.86deg 154.29deg,
-    #f5ed38 154.29deg 205.72deg,
-    #5e4591 205.72deg 257.15deg,
-    #28a638 257.15deg 308.58deg,
-    #ef7d0c 308.58deg 360deg
+    #332834 0deg 51.43deg,
+    #5c505d 51.43deg 102.86deg,
+    #897b89 102.86deg 154.29deg,
+    #b8aab8 154.29deg 205.72deg,
+    #eadbea 205.72deg 257.15deg,
+    #d9ecff 257.15deg 308.58deg,
+    #efedf5 308.58deg 360deg
   );
   box-shadow:
     0 0 0 8px #efedf5,
@@ -1818,7 +1819,6 @@ button {
   width: 135px;
   margin-left: -67.5px;
   margin-top: -17px;
-  color: #140014;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   font-size: 12px;
   font-weight: 800;
@@ -1830,33 +1830,37 @@ button {
 
 .label-1 {
   transform: rotate(25.7deg) translateY(-155px) rotate(64.3deg);
-  color: white;
+  color: #f7effb;
 }
 
 .label-2 {
   transform: rotate(77.1deg) translateY(-155px) rotate(12.9deg);
+  color: #f7effb;
 }
 
 .label-3 {
   transform: rotate(128.6deg) translateY(-155px) rotate(-38.6deg);
+  color: #f7effb;
 }
 
 .label-4 {
   transform: rotate(180deg) translateY(-155px) rotate(-90deg);
+  color: #140014;
 }
 
 .label-5 {
   transform: rotate(231.4deg) translateY(-155px) rotate(-141.4deg);
-  color: white;
+  color: #140014;
 }
 
 .label-6 {
   transform: rotate(282.9deg) translateY(-155px) rotate(-192.9deg);
-  color: white;
+  color: #140014;
 }
 
 .label-7 {
   transform: rotate(334.3deg) translateY(-155px) rotate(-244.3deg);
+  color: #140014;
 }
 
 .membership-wheel-center {
@@ -1924,6 +1928,14 @@ button {
 }
 
 @media screen and (max-width: 700px) {
+  .memberships-frame {
+    padding: 38px 18px 34px;
+  }
+
+  .memberships-frame h2 {
+    font-size: 21px;
+  }
+
   .membership-wheel-wrap {
     width: min(340px, 84vw);
     height: min(340px, 84vw);
@@ -1933,16 +1945,6 @@ button {
     width: 100px;
     margin-left: -50px;
     font-size: 9px;
-  }
-
-  .label-1,
-  .label-2,
-  .label-3,
-  .label-4,
-  .label-5,
-  .label-6,
-  .label-7 {
-    transform-origin: 50% 50%;
   }
 
   .label-1 {
@@ -1989,14 +1991,4 @@ button {
   .membership-name {
     text-align: center;
   }
-}
-
-gis-projects-section {
-  margin-bottom: 0 !important;
-  padding-bottom: 52px !important;
-}
-
-.memberships-section {
-  margin-top: 0 !important;
-  padding-top: 48px !important;
 }
