@@ -1786,12 +1786,12 @@ button {
   overflow: hidden;
   background: conic-gradient(
     #332834 0deg 51.43deg,
-    #5c505d 51.43deg 102.86deg,
-    #897b89 102.86deg 154.29deg,
-    #b8aab8 154.29deg 205.72deg,
-    #eadbea 205.72deg 257.15deg,
-    #d9ecff 257.15deg 308.58deg,
-    #efedf5 308.58deg 360deg
+    #eadbea 51.43deg 102.86deg,
+    #f8e287 102.86deg 154.29deg,
+    #d9ecff 154.29deg 205.72deg,
+    #f7a8c5 205.72deg 257.15deg,
+    #ffffff 257.15deg 308.58deg,
+    #9b008f 308.58deg 360deg
   );
   box-shadow:
     0 0 0 8px #efedf5,
@@ -1806,8 +1806,8 @@ button {
   border-radius: 50%;
   background: repeating-conic-gradient(
     from 0deg,
-    rgba(20, 0, 20, 0.42) 0deg 1.2deg,
-    transparent 1.2deg 51.43deg
+    rgba(20, 0, 20, 0.45) 0deg 1.4deg,
+    transparent 1.4deg 51.43deg
   );
   pointer-events: none;
 }
@@ -1835,12 +1835,12 @@ button {
 
 .label-2 {
   transform: rotate(77.1deg) translateY(-155px) rotate(12.9deg);
-  color: #f7effb;
+  color: #140014;
 }
 
 .label-3 {
   transform: rotate(128.6deg) translateY(-155px) rotate(-38.6deg);
-  color: #f7effb;
+  color: #140014;
 }
 
 .label-4 {
@@ -1860,7 +1860,7 @@ button {
 
 .label-7 {
   transform: rotate(334.3deg) translateY(-155px) rotate(-244.3deg);
-  color: #140014;
+  color: #f7effb;
 }
 
 .membership-wheel-center {
