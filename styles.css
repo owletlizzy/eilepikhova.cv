@@ -1722,7 +1722,7 @@ button {
 }
 
 .memberships-frame {
-  max-width: 880px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 44px 34px 42px;
   border: 3px solid #140014;
@@ -1743,34 +1743,34 @@ button {
 
 .membership-wheel-wrap {
   position: relative;
-  width: min(420px, 82vw);
-  height: min(420px, 82vw);
+  width: min(460px, 86vw);
+  height: min(460px, 86vw);
   margin: 0 auto 24px;
 }
 
 .membership-pointer {
   position: absolute;
   top: 50%;
-  right: -8px;
+  right: -10px;
   width: 0;
   height: 0;
   border-top: 18px solid transparent;
   border-bottom: 18px solid transparent;
   border-right: 34px solid #140014;
   transform: translateY(-50%);
-  z-index: 5;
+  z-index: 10;
 }
 
 .membership-pointer::after {
   content: "";
   position: absolute;
-  top: -12px;
-  right: -31px;
+  top: -11px;
+  right: -30px;
   width: 0;
   height: 0;
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
-  border-right: 24px solid #f8efd9;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-right: 23px solid #efedf5;
 }
 
 .membership-spin-wheel {
@@ -1786,7 +1786,7 @@ button {
   background: conic-gradient(
     #e52421 0deg 51.43deg,
     #4ba3d3 51.43deg 102.86deg,
-    #ffffff 102.86deg 154.29deg,
+    #f8efd9 102.86deg 154.29deg,
     #f5ed38 154.29deg 205.72deg,
     #5e4591 205.72deg 257.15deg,
     #28a638 257.15deg 308.58deg,
@@ -1803,70 +1803,68 @@ button {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background:
-    linear-gradient(0deg, transparent 49.6%, rgba(20, 0, 20, 0.45) 50%, transparent 50.4%),
-    linear-gradient(51.43deg, transparent 49.6%, rgba(20, 0, 20, 0.45) 50%, transparent 50.4%),
-    linear-gradient(102.86deg, transparent 49.6%, rgba(20, 0, 20, 0.45) 50%, transparent 50.4%),
-    linear-gradient(154.29deg, transparent 49.6%, rgba(20, 0, 20, 0.45) 50%, transparent 50.4%),
-    linear-gradient(205.72deg, transparent 49.6%, rgba(20, 0, 20, 0.45) 50%, transparent 50.4%),
-    linear-gradient(257.15deg, transparent 49.6%, rgba(20, 0, 20, 0.45) 50%, transparent 50.4%),
-    linear-gradient(308.58deg, transparent 49.6%, rgba(20, 0, 20, 0.45) 50%, transparent 50.4%);
+  background: repeating-conic-gradient(
+    from 0deg,
+    rgba(20, 0, 20, 0.42) 0deg 1.2deg,
+    transparent 1.2deg 51.43deg
+  );
   pointer-events: none;
 }
 
-.wheel-slice {
+.wheel-label {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 42%;
+  width: 135px;
+  margin-left: -67.5px;
+  margin-top: -17px;
   color: #140014;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 800;
   line-height: 1.05;
   text-align: center;
-  transform-origin: left center;
+  z-index: 3;
+  transform-origin: 50% 50%;
 }
 
-.slice-1 {
-  transform: rotate(25deg) translateX(52px) rotate(0deg);
+.label-1 {
+  transform: rotate(25.7deg) translateY(-155px) rotate(64.3deg);
   color: white;
 }
 
-.slice-2 {
-  transform: rotate(77deg) translateX(54px) rotate(0deg);
+.label-2 {
+  transform: rotate(77.1deg) translateY(-155px) rotate(12.9deg);
 }
 
-.slice-3 {
-  transform: rotate(128deg) translateX(54px) rotate(0deg);
+.label-3 {
+  transform: rotate(128.6deg) translateY(-155px) rotate(-38.6deg);
 }
 
-.slice-4 {
-  transform: rotate(180deg) translateX(48px) rotate(0deg);
+.label-4 {
+  transform: rotate(180deg) translateY(-155px) rotate(-90deg);
 }
 
-.slice-5 {
-  transform: rotate(231deg) translateX(42px) rotate(0deg);
+.label-5 {
+  transform: rotate(231.4deg) translateY(-155px) rotate(-141.4deg);
   color: white;
-  font-size: 14px;
 }
 
-.slice-6 {
-  transform: rotate(283deg) translateX(35px) rotate(0deg);
+.label-6 {
+  transform: rotate(282.9deg) translateY(-155px) rotate(-192.9deg);
   color: white;
-  font-size: 13px;
 }
 
-.slice-7 {
-  transform: rotate(334deg) translateX(54px) rotate(0deg);
+.label-7 {
+  transform: rotate(334.3deg) translateY(-155px) rotate(-244.3deg);
 }
 
 .membership-wheel-center {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 108px;
-  height: 108px;
+  width: 105px;
+  height: 105px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1876,12 +1874,12 @@ button {
   border-radius: 50%;
   transform: translate(-50%, -50%);
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 800;
   line-height: 1.05;
   text-align: center;
   box-shadow: 0 0 12px rgba(20, 0, 20, 0.22);
-  z-index: 4;
+  z-index: 5;
 }
 
 .membership-wheel-result {
@@ -1909,44 +1907,76 @@ button {
   text-align: left;
 }
 
-.membership-year {
+.membership-year,
+.membership-name {
   color: #140014;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 17px;
+}
+
+.membership-year {
   font-weight: 700;
   text-align: right;
 }
 
 .membership-name {
-  color: #140014;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 17px;
   line-height: 1.35;
 }
 
 @media screen and (max-width: 700px) {
-  .memberships-frame {
-    padding: 38px 18px 34px;
-  }
-
   .membership-wheel-wrap {
-    width: min(330px, 82vw);
-    height: min(330px, 82vw);
+    width: min(340px, 84vw);
+    height: min(340px, 84vw);
   }
 
-  .wheel-slice {
-    font-size: 13px;
+  .wheel-label {
+    width: 100px;
+    margin-left: -50px;
+    font-size: 9px;
   }
 
-  .slice-5,
-  .slice-6 {
-    font-size: 10px;
+  .label-1,
+  .label-2,
+  .label-3,
+  .label-4,
+  .label-5,
+  .label-6,
+  .label-7 {
+    transform-origin: 50% 50%;
+  }
+
+  .label-1 {
+    transform: rotate(25.7deg) translateY(-114px) rotate(64.3deg);
+  }
+
+  .label-2 {
+    transform: rotate(77.1deg) translateY(-114px) rotate(12.9deg);
+  }
+
+  .label-3 {
+    transform: rotate(128.6deg) translateY(-114px) rotate(-38.6deg);
+  }
+
+  .label-4 {
+    transform: rotate(180deg) translateY(-114px) rotate(-90deg);
+  }
+
+  .label-5 {
+    transform: rotate(231.4deg) translateY(-114px) rotate(-141.4deg);
+  }
+
+  .label-6 {
+    transform: rotate(282.9deg) translateY(-114px) rotate(-192.9deg);
+  }
+
+  .label-7 {
+    transform: rotate(334.3deg) translateY(-114px) rotate(-244.3deg);
   }
 
   .membership-wheel-center {
-    width: 86px;
-    height: 86px;
-    font-size: 15px;
+    width: 82px;
+    height: 82px;
+    font-size: 14px;
   }
 
   .membership-item {
@@ -1960,4 +1990,3 @@ button {
     text-align: center;
   }
 }
-
