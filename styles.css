@@ -2003,12 +2003,12 @@ button {
 .brace-section {
   background: #ffd3e6;
   margin: 0 -500%;
-  padding: 32px 500% 38px;
+  padding: 28px 500% 44px;
   text-align: center;
 }
 
 .brace-section h2 {
-  margin: 0 0 18px;
+  margin: 0 0 10px;
   text-align: center;
   text-decoration: underline;
   color: #140014;
@@ -2016,164 +2016,152 @@ button {
 
 .brace-schema {
   position: relative;
-  width: 100%;
-  max-width: 980px;
-  height: 560px;
+  width: 980px;
+  max-width: 100%;
+  height: 700px;
   margin: 0 auto;
+}
+
+.brace-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.brace-lines line {
+  stroke: #2a1a2a;
+  stroke-width: 3;
+  stroke-linecap: round;
 }
 
 .brace-core,
 .brace-node {
   position: absolute;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
+  background: white;
   border: 5px solid #a00090;
   border-radius: 50%;
   box-shadow: 9px 8px 0 #ccefff;
   color: #140014;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.15;
   text-align: center;
 }
 
 .brace-core {
-  width: 285px;
-  height: 285px;
+  width: 275px;
+  height: 275px;
   left: 50%;
-  top: 18px;
+  top: 42px;
   transform: translateX(-50%);
   padding: 34px;
-  font-size: 19px;
-  line-height: 1.38;
+}
+
+.brace-core p {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.35;
 }
 
 .brace-core strong {
   color: #a00090;
-  font-size: 29px;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .brace-node {
-  width: 190px;
-  height: 190px;
-  padding: 20px;
+  width: 180px;
+  height: 180px;
+  padding: 18px;
 }
 
-.brace-node .brace-letter {
+.brace-letter {
   display: block;
   color: #a00090;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 36px;
+  font-size: 35px;
   font-weight: 700;
   line-height: 1;
 }
 
-.brace-node .brace-word {
+.brace-word {
   display: block;
-  margin-top: 7px;
+  margin-top: 5px;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   font-size: 16px;
   font-weight: 700;
+  line-height: 1.05;
 }
 
-.brace-node .brace-desc {
+.brace-desc {
   display: block;
-  max-width: 138px;
-  margin-top: 4px;
+  max-width: 132px;
+  margin-top: 5px;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 14px;
   font-style: italic;
-  line-height: 1.02;
+  line-height: 1.03;
 }
 
-.brace-node.bravery {
-  left: 0;
-  top: 82px;
+.brace-bravery {
+  left: 10px;
+  top: 115px;
 }
 
-.brace-node.empathy {
-  right: 0;
-  top: 82px;
+.brace-empathy {
+  right: 10px;
+  top: 115px;
 }
 
-.brace-node.reflection {
-  left: 170px;
-  top: 320px;
+.brace-reflection {
+  left: 190px;
+  top: 390px;
 }
 
-.brace-node.application {
+.brace-creativity {
+  right: 190px;
+  top: 390px;
+}
+
+.brace-application {
   left: 50%;
-  top: 425px;
+  top: 500px;
+  width: 170px;
+  height: 170px;
   transform: translateX(-50%);
 }
 
-.brace-node.creativity {
-  right: 170px;
-  top: 320px;
-}
-
-.brace-line {
-  position: absolute;
-  z-index: 1;
-  height: 3px;
-  background: #2a1a2a;
-  border-radius: 999px;
-  transform-origin: left center;
-}
-
-/* short, controlled connector lines */
-.line-bravery {
-  left: 185px;
-  top: 177px;
-  width: 165px;
-}
-
-.line-empathy {
-  right: 185px;
-  top: 177px;
-  width: 165px;
-}
-
-.line-reflection {
-  left: 360px;
-  top: 298px;
-  width: 115px;
-  transform: rotate(132deg);
-}
-
-.line-application {
-  left: 50%;
-  top: 303px;
-  width: 120px;
-  transform: rotate(90deg);
-}
-
-.line-creativity {
-  right: 360px;
-  top: 298px;
-  width: 115px;
-  transform: rotate(48deg);
-}
-
-/* Mobile: stack it cleanly instead of forcing the diagram */
+/* Mobile version: stack cleanly */
 @media screen and (max-width: 760px) {
   .brace-section {
-    padding-top: 28px;
-    padding-bottom: 34px;
+    padding: 28px 500% 36px;
   }
 
   .brace-schema {
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 18px;
+    margin-top: 18px;
+  }
+
+  .brace-lines {
+    display: none;
   }
 
   .brace-core,
-  .brace-node {
+  .brace-node,
+  .brace-application {
     position: static;
     transform: none;
   }
@@ -2181,15 +2169,10 @@ button {
   .brace-core {
     width: 260px;
     height: 260px;
-    font-size: 17px;
   }
 
   .brace-node {
     width: 205px;
     height: 205px;
-  }
-
-  .brace-line {
-    display: none;
   }
 }
