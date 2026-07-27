@@ -1722,22 +1722,17 @@ button {
 }
 
 .memberships-frame {
-  position: relative;
-  max-width: 820px;
+  max-width: 880px;
   margin: 0 auto;
-  padding: 48px 44px 40px;
+  padding: 44px 34px 42px;
   border: 3px solid #140014;
   box-shadow: 7px 7px 0 #9b008f;
-  background:
-    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.78), transparent 22%),
-    radial-gradient(circle at 88% 82%, rgba(255, 255, 255, 0.65), transparent 24%),
-    #efedf5;
+  background: #efedf5;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .memberships-frame h2 {
-  margin: 0 0 34px;
+  margin: 0 0 28px;
   color: #140014;
   text-align: center;
   text-decoration: underline;
@@ -1746,11 +1741,164 @@ button {
   font-weight: 700;
 }
 
+.membership-wheel-wrap {
+  position: relative;
+  width: min(420px, 82vw);
+  height: min(420px, 82vw);
+  margin: 0 auto 24px;
+}
+
+.membership-pointer {
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-right: 34px solid #140014;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.membership-pointer::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  right: -31px;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 24px solid #f8efd9;
+}
+
+.membership-spin-wheel {
+  all: unset;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #140014;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  background: conic-gradient(
+    #e52421 0deg 51.43deg,
+    #4ba3d3 51.43deg 102.86deg,
+    #ffffff 102.86deg 154.29deg,
+    #f5ed38 154.29deg 205.72deg,
+    #5e4591 205.72deg 257.15deg,
+    #28a638 257.15deg 308.58deg,
+    #ef7d0c 308.58deg 360deg
+  );
+  box-shadow:
+    0 0 0 8px #efedf5,
+    0 8px 18px rgba(20, 0, 20, 0.28);
+  transition: transform 4s cubic-bezier(0.18, 0.82, 0.22, 1);
+}
+
+.membership-spin-wheel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    linear-gradient(0deg, transparent 49.6%, rgba(20, 0, 20, 0.45) 50%, transparent 50.4%),
+    linear-gradient(51.43deg, transparent 49.6%, rgba(20, 0, 20, 0.45) 50%, transparent 50.4%),
+    linear-gradient(102.86deg, transparent 49.6%, rgba(20, 0, 20, 0.45) 50%, transparent 50.4%),
+    linear-gradient(154.29deg, transparent 49.6%, rgba(20, 0, 20, 0.45) 50%, transparent 50.4%),
+    linear-gradient(205.72deg, transparent 49.6%, rgba(20, 0, 20, 0.45) 50%, transparent 50.4%),
+    linear-gradient(257.15deg, transparent 49.6%, rgba(20, 0, 20, 0.45) 50%, transparent 50.4%),
+    linear-gradient(308.58deg, transparent 49.6%, rgba(20, 0, 20, 0.45) 50%, transparent 50.4%);
+  pointer-events: none;
+}
+
+.wheel-slice {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 42%;
+  color: #140014;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.05;
+  text-align: center;
+  transform-origin: left center;
+}
+
+.slice-1 {
+  transform: rotate(25deg) translateX(52px) rotate(0deg);
+  color: white;
+}
+
+.slice-2 {
+  transform: rotate(77deg) translateX(54px) rotate(0deg);
+}
+
+.slice-3 {
+  transform: rotate(128deg) translateX(54px) rotate(0deg);
+}
+
+.slice-4 {
+  transform: rotate(180deg) translateX(48px) rotate(0deg);
+}
+
+.slice-5 {
+  transform: rotate(231deg) translateX(42px) rotate(0deg);
+  color: white;
+  font-size: 14px;
+}
+
+.slice-6 {
+  transform: rotate(283deg) translateX(35px) rotate(0deg);
+  color: white;
+  font-size: 13px;
+}
+
+.slice-7 {
+  transform: rotate(334deg) translateX(54px) rotate(0deg);
+}
+
+.membership-wheel-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 108px;
+  height: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #efedf5;
+  color: #140014;
+  border: 3px solid #140014;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.05;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(20, 0, 20, 0.22);
+  z-index: 4;
+}
+
+.membership-wheel-result {
+  min-height: 30px;
+  margin: 0 auto 30px;
+  color: #140014;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
 .membership-list {
   display: grid;
   gap: 18px;
-  position: relative;
-  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .membership-item {
@@ -1776,156 +1924,29 @@ button {
   line-height: 1.35;
 }
 
-.membership-wheel {
-  position: absolute;
-  top: 16px;
-  right: 22px;
-  width: 78px;
-  height: 78px;
-  z-index: 1;
-  animation: membershipWheelSpin 7s linear infinite;
-}
-
-.wheel-ring {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border: 3px solid #140014;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle, #fff8cf 0 18%, transparent 19%),
-    conic-gradient(
-      from 0deg,
-      #9b008f 0deg 22.5deg,
-      #f7effb 22.5deg 45deg,
-      #6fa8dc 45deg 67.5deg,
-      #f8efd9 67.5deg 90deg,
-      #9b008f 90deg 112.5deg,
-      #f7effb 112.5deg 135deg,
-      #6fa8dc 135deg 157.5deg,
-      #f8efd9 157.5deg 180deg,
-      #9b008f 180deg 202.5deg,
-      #f7effb 202.5deg 225deg,
-      #6fa8dc 225deg 247.5deg,
-      #f8efd9 247.5deg 270deg,
-      #9b008f 270deg 292.5deg,
-      #f7effb 292.5deg 315deg,
-      #6fa8dc 315deg 337.5deg,
-      #f8efd9 337.5deg 360deg
-    );
-  box-shadow:
-    0 0 0 4px #efedf5,
-    0 0 0 6px #9b008f,
-    0 0 12px rgba(155, 0, 143, 0.45);
-}
-
-.wheel-ring span {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 3px;
-  height: 34px;
-  background: #140014;
-  transform-origin: 50% 0;
-}
-
-.wheel-ring span:nth-child(1) {
-  transform: rotate(0deg);
-}
-
-.wheel-ring span:nth-child(2) {
-  transform: rotate(45deg);
-}
-
-.wheel-ring span:nth-child(3) {
-  transform: rotate(90deg);
-}
-
-.wheel-ring span:nth-child(4) {
-  transform: rotate(135deg);
-}
-
-.wheel-ring span:nth-child(5) {
-  transform: rotate(180deg);
-}
-
-.wheel-ring span:nth-child(6) {
-  transform: rotate(225deg);
-}
-
-.wheel-ring span:nth-child(7) {
-  transform: rotate(270deg);
-}
-
-.wheel-ring span:nth-child(8) {
-  transform: rotate(315deg);
-}
-
-.wheel-center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 18px;
-  height: 18px;
-  background: #fff8cf;
-  border: 3px solid #140014;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 8px rgba(255, 248, 207, 0.95);
-}
-
-.memberships-frame::before,
-.memberships-frame::after {
-  content: "✦ ✧ ✦ ✧ ✦";
-  position: absolute;
-  color: #9b008f;
-  font-size: 18px;
-  letter-spacing: 6px;
-  opacity: 0.55;
-  animation: membershipGlimmer 2.8s ease-in-out infinite alternate;
-}
-
-.memberships-frame::before {
-  left: 18px;
-  top: 16px;
-}
-
-.memberships-frame::after {
-  right: 18px;
-  bottom: 16px;
-  animation-delay: 1.2s;
-}
-
-@keyframes membershipWheelSpin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes membershipGlimmer {
-  from {
-    opacity: 0.28;
-    filter: brightness(0.9);
-  }
-
-  to {
-    opacity: 0.9;
-    filter: brightness(1.45);
-  }
-}
-
 @media screen and (max-width: 700px) {
   .memberships-frame {
-    padding: 42px 22px 34px;
+    padding: 38px 18px 34px;
   }
 
-  .memberships-frame h2 {
-    font-size: 21px;
-    margin-bottom: 30px;
+  .membership-wheel-wrap {
+    width: min(330px, 82vw);
+    height: min(330px, 82vw);
+  }
+
+  .wheel-slice {
+    font-size: 13px;
+  }
+
+  .slice-5,
+  .slice-6 {
+    font-size: 10px;
+  }
+
+  .membership-wheel-center {
+    width: 86px;
+    height: 86px;
+    font-size: 15px;
   }
 
   .membership-item {
@@ -1934,28 +1955,9 @@ button {
     text-align: center;
   }
 
-  .membership-year {
-    text-align: center;
-  }
-
+  .membership-year,
   .membership-name {
     text-align: center;
   }
-
-  .membership-wheel {
-    width: 54px;
-    height: 54px;
-    top: 10px;
-    right: 10px;
-    opacity: 0.7;
-  }
-
-  .wheel-ring span {
-    height: 23px;
-  }
-
-  .wheel-center {
-    width: 13px;
-    height: 13px;
-  }
 }
+
