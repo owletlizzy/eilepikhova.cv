@@ -913,7 +913,7 @@ Placemaking, Belonging, and Activism.<br></i> Syracuse University Press.</li>
             </div>
             <p>You can also take a look at my teaching-related certificates &nbsp;<a href="#teaching-certificates">here</a></p></section><section class="education"> <br>
             <br>
-             <section class="memberships-section">
+            <section class="memberships-section">
   <div class="content-wrap">
     <div class="memberships-frame">
       <h2>Professional Memberships</h2>
@@ -927,13 +927,13 @@ Placemaking, Belonging, and Activism.<br></i> Syracuse University Press.</li>
           onclick="spinMembershipWheel()"
           aria-label="Spin professional memberships wheel"
         >
-          <span class="wheel-slice slice-1">NACIS</span>
-          <span class="wheel-slice slice-2">AGS</span>
-          <span class="wheel-slice slice-3">AAG</span>
-          <span class="wheel-slice slice-4">Alpha Chi</span>
-          <span class="wheel-slice slice-5">Gamma Theta Epsilon</span>
-          <span class="wheel-slice slice-6">Alpha Kappa Delta</span>
-          <span class="wheel-slice slice-7">ASA</span>
+          <span class="wheel-label label-1">2026-present<br>NACIS</span>
+          <span class="wheel-label label-2">2026-present<br>AGS</span>
+          <span class="wheel-label label-3">2026-present<br>AAG</span>
+          <span class="wheel-label label-4">2026-present<br>Alpha Chi</span>
+          <span class="wheel-label label-5">2024-present<br>Gamma Theta<br>Epsilon</span>
+          <span class="wheel-label label-6">2022-present<br>Alpha Kappa<br>Delta</span>
+          <span class="wheel-label label-7">2019-present<br>ASA</span>
 
           <span class="membership-wheel-center">
             Tap to<br>spin
@@ -1347,25 +1347,23 @@ Placemaking, Belonging, and Activism.<br></i> Syracuse University Press.</li>
     const result = document.getElementById("membershipWheelResult");
 
     const memberships = [
-      "North American Cartographic Information Society",
-      "American Geographical Society",
-      "American Association of Geographers",
-      "Alpha Chi National College Honor Society",
-      "Gamma Theta Epsilon International Honor Society in Geography",
-      "Alpha Kappa Delta International Honor Society in Sociology",
-      "American Sociological Association"
+      "2026-present: North American Cartographic Information Society",
+      "2026-present: American Geographical Society",
+      "2026-present: American Association of Geographers",
+      "2026-present: Alpha Chi National College Honor Society",
+      "2024-present: Gamma Theta Epsilon International Honor Society in Geography",
+      "2022-present: Alpha Kappa Delta International Honor Society in Sociology",
+      "2019-present: American Sociological Association"
     ];
 
     const selectedIndex = Math.floor(Math.random() * memberships.length);
     const sliceSize = 360 / memberships.length;
-
     const targetAngle = 360 - (selectedIndex * sliceSize + sliceSize / 2);
     const extraSpins = 360 * 5;
 
     membershipWheelRotation += extraSpins + targetAngle;
 
     wheel.style.transform = "rotate(" + membershipWheelRotation + "deg)";
-
     result.textContent = "Spinning...";
 
     setTimeout(function() {
