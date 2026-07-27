@@ -2035,45 +2035,45 @@ button {
   position: absolute;
   z-index: 1;
   display: block;
-  height: 4px;
+  height: 3px;
   background: #140014;
   border-radius: 999px;
-  opacity: 0.88;
+  opacity: 0.85;
   transform-origin: left center;
 }
 
 .line-bravery {
-  width: 245px;
-  left: 205px;
-  top: 230px;
+  width: 105px;
+  left: 270px;
+  top: 235px;
   transform: rotate(-1deg);
 }
 
 .line-empathy {
-  width: 245px;
-  left: 730px;
-  top: 230px;
+  width: 105px;
+  left: 805px;
+  top: 235px;
   transform: rotate(1deg);
 }
 
 .line-reflection {
-  width: 170px;
-  left: 425px;
-  top: 355px;
+  width: 165px;
+  left: 465px;
+  top: 365px;
   transform: rotate(132deg);
 }
 
 .line-application {
   width: 95px;
   left: 590px;
-  top: 368px;
+  top: 370px;
   transform: rotate(90deg);
 }
 
 .line-creativity {
-  width: 170px;
-  left: 755px;
-  top: 355px;
+  width: 165px;
+  left: 650px;
+  top: 365px;
   transform: rotate(48deg);
 }
 
