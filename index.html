@@ -1339,7 +1339,7 @@ Placemaking, Belonging, and Activism.<br></i> Syracuse University Press.</li>
     result.textContent = "Nope. This one is a lie.";
   }
 </script>
-        <script>
+      <script>
   let membershipWheelRotation = 0;
 
   function spinMembershipWheel() {
@@ -1358,10 +1358,16 @@ Placemaking, Belonging, and Activism.<br></i> Syracuse University Press.</li>
 
     const selectedIndex = Math.floor(Math.random() * memberships.length);
     const sliceSize = 360 / memberships.length;
-    const targetAngle = 360 - (selectedIndex * sliceSize + sliceSize / 2);
+    const selectedSliceCenter = selectedIndex * sliceSize + sliceSize / 2;
+
+    
+    const desiredFinalRotation = 90 - selectedSliceCenter;
+    const currentRotationMod = ((membershipWheelRotation % 360) + 360) % 360;
+    const desiredRotationMod = ((desiredFinalRotation % 360) + 360) % 360;
+    const correction = (desiredRotationMod - currentRotationMod + 360) % 360;
     const extraSpins = 360 * 5;
 
-    membershipWheelRotation += extraSpins + targetAngle;
+    membershipWheelRotation += extraSpins + correction;
 
     wheel.style.transform = "rotate(" + membershipWheelRotation + "deg)";
     result.textContent = "Spinning...";
