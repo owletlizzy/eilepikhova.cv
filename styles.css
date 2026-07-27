@@ -2000,230 +2000,196 @@ button {
 
 
 
-.brace-schema-section {
-  background: transparent;
-  padding: 0;
-  margin: 0 0 38px;
+.brace-section {
+  background: #ffd3e6;
+  margin: 0 -500%;
+  padding: 32px 500% 38px;
   text-align: center;
 }
 
-.brace-schema-wrap {
-  max-width: 1220px;
-  margin: 0 auto;
-}
-
-.brace-schema-section h2 {
-  margin: 0 0 -28px;
-  color: #140014;
+.brace-section h2 {
+  margin: 0 0 18px;
+  text-align: center;
   text-decoration: underline;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  font-size: 28px;
+  color: #140014;
 }
 
 .brace-schema {
   position: relative;
-  width: min(1180px, 100%);
-  height: 650px;
+  width: 100%;
+  max-width: 980px;
+  height: 560px;
   margin: 0 auto;
-  transform: translateY(-30px);
-  overflow: visible;
 }
-
-/* Connector lines */
-
-.brace-line {
-  position: absolute;
-  z-index: 1;
-  display: block;
-  height: 3px;
-  background: #140014;
-  border-radius: 999px;
-  opacity: 0.8;
-  transform-origin: left center;
-}
-
-/* B to core */
-.line-bravery {
-  width: 155px;
-  left: 220px;
-  top: 225px;
-  transform: rotate(-1deg);
-}
-
-/* core to E */
-.line-empathy {
-  width: 155px;
-  left: 805px;
-  top: 225px;
-  transform: rotate(1deg);
-}
-
-/* core to R */
-.line-reflection {
-  width: 145px;
-  left: 420px;
-  top: 345px;
-  transform: rotate(130deg);
-}
-
-/* core to A */
-.line-application {
-  width: 115px;
-  left: 590px;
-  top: 365px;
-  transform: rotate(90deg);
-}
-
-/* core to C */
-.line-creativity {
-  width: 145px;
-  left: 760px;
-  top: 345px;
-  transform: rotate(50deg);
-}
-
-/* Circles */
 
 .brace-core,
 .brace-node {
   position: absolute;
   z-index: 2;
-  background: #ffffff;
-  border: 5px solid #9b008f;
-  box-shadow: 8px 8px 0 #d9ecff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 5px solid #a00090;
+  border-radius: 50%;
+  box-shadow: 9px 8px 0 #ccefff;
   color: #140014;
-  font-family: Georgia, "Times New Roman", serif;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .brace-core {
-  width: 290px;
-  height: 290px;
-  border-radius: 50%;
+  width: 285px;
+  height: 285px;
   left: 50%;
-  top: 220px;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 18px;
+  transform: translateX(-50%);
   padding: 34px;
-}
-
-.brace-core p {
-  margin: 0;
-  font-size: 18px;
-  line-height: 1.35;
+  font-size: 19px;
+  line-height: 1.38;
 }
 
 .brace-core strong {
-  color: #9b008f;
-  font-size: 28px;
-  letter-spacing: 1px;
+  color: #a00090;
+  font-size: 29px;
 }
 
 .brace-node {
   width: 190px;
   height: 190px;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
   padding: 20px;
 }
 
-.brace-node span {
+.brace-node .brace-letter {
   display: block;
-  font-size: 34px;
-  font-weight: 800;
-  color: #9b008f;
+  color: #a00090;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 36px;
+  font-weight: 700;
   line-height: 1;
 }
 
-.brace-node h3 {
-  margin: 2px 0 3px;
-  font-size: 17px;
+.brace-node .brace-word {
+  display: block;
+  margin-top: 7px;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 1.05;
 }
 
-.brace-node p {
-  margin: 0;
-  font-size: 12.5px;
+.brace-node .brace-desc {
+  display: block;
+  max-width: 138px;
+  margin-top: 4px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
   font-style: italic;
-  line-height: 1.12;
-  max-width: 135px;
+  line-height: 1.02;
 }
 
-/* Circle placement */
-
-.bravery {
-  left: 25px;
-  top: 130px;
+.brace-node.bravery {
+  left: 0;
+  top: 82px;
 }
 
-.empathy {
-  right: 25px;
-  top: 130px;
+.brace-node.empathy {
+  right: 0;
+  top: 82px;
 }
 
-.reflection {
-  left: 130px;
-  top: 390px;
+.brace-node.reflection {
+  left: 170px;
+  top: 320px;
 }
 
-.application {
+.brace-node.application {
   left: 50%;
-  top: 500px;
+  top: 425px;
   transform: translateX(-50%);
 }
 
-.creativity {
-  right: 130px;
-  top: 390px;
+.brace-node.creativity {
+  right: 170px;
+  top: 320px;
 }
 
-/* Mobile layout */
+.brace-line {
+  position: absolute;
+  z-index: 1;
+  height: 3px;
+  background: #2a1a2a;
+  border-radius: 999px;
+  transform-origin: left center;
+}
 
-@media screen and (max-width: 850px) {
-  .brace-schema-section h2 {
-    margin: 0 0 22px;
+/* short, controlled connector lines */
+.line-bravery {
+  left: 185px;
+  top: 177px;
+  width: 165px;
+}
+
+.line-empathy {
+  right: 185px;
+  top: 177px;
+  width: 165px;
+}
+
+.line-reflection {
+  left: 360px;
+  top: 298px;
+  width: 115px;
+  transform: rotate(132deg);
+}
+
+.line-application {
+  left: 50%;
+  top: 303px;
+  width: 120px;
+  transform: rotate(90deg);
+}
+
+.line-creativity {
+  right: 360px;
+  top: 298px;
+  width: 115px;
+  transform: rotate(48deg);
+}
+
+/* Mobile: stack it cleanly instead of forcing the diagram */
+@media screen and (max-width: 760px) {
+  .brace-section {
+    padding-top: 28px;
+    padding-bottom: 34px;
   }
 
   .brace-schema {
     height: auto;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 18px;
-    transform: none;
-  }
-
-  .brace-line {
-    display: none;
   }
 
   .brace-core,
   .brace-node {
     position: static;
     transform: none;
-    margin: 0 auto;
   }
 
   .brace-core {
-    width: 270px;
-    height: 270px;
+    width: 260px;
+    height: 260px;
+    font-size: 17px;
   }
 
   .brace-node {
-    width: min(310px, 92vw);
-    height: auto;
-    min-height: 120px;
-    border-radius: 28px;
+    width: 205px;
+    height: 205px;
   }
 
-  .brace-node p {
-    max-width: 240px;
-    font-size: 14px;
+  .brace-line {
+    display: none;
   }
 }
