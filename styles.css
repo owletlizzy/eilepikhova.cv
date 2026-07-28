@@ -2147,10 +2147,9 @@ button {
   line-height: 1.03;
 }
 
-/* Mobile: stack safely */
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 1050px) {
   .brace-section {
-    padding: 24px 500% 34px;
+    padding: 42px 500% 48px;
     overflow: visible;
   }
 
@@ -2165,6 +2164,8 @@ button {
     flex-direction: column;
     align-items: center;
     gap: 18px;
+    transform: none;
+    margin: 0 auto;
   }
 
   .brace-connectors {
