@@ -1183,20 +1183,21 @@ Placemaking, Belonging, and Activism.<br></i> Syracuse University Press.</li>
 
   if (conferenceMapElement) {
     const conferenceMap = L.map("conferenceMap", {
-  scrollWheelZoom: false,
-  dragging: true,
-  tap: true
-}).setView([42, -35], 2);
+      scrollWheelZoom: false,
+      dragging: true,
+      tap: true
+    }).setView([42, -35], 2);
+
     conferenceMap.touchZoom.enable();
-  conferenceMap.doubleClickZoom.enable();
-  conferenceMap.boxZoom.disable();
-  conferenceMap.keyboard.disable();
+    conferenceMap.doubleClickZoom.enable();
+    conferenceMap.boxZoom.disable();
+    conferenceMap.keyboard.disable();
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 18,
-  attribution: "&copy; OpenStreetMap contributors",
-  className: "purple-map-tiles"
-}).addTo(conferenceMap);
+      maxZoom: 18,
+      attribution: "&copy; OpenStreetMap contributors",
+      className: "purple-map-tiles"
+    }).addTo(conferenceMap);
 
     const conferenceCities = [
       {
@@ -1220,6 +1221,12 @@ Placemaking, Belonging, and Activism.<br></i> Syracuse University Press.</li>
             role: "Presenter",
             conference: "NACIS Conference",
             title: "Resurrecting Historical Geodata: A Vision-Language Model Approach to Integrating Property Assessment Records and Census Geographies"
+          },
+          {
+            year: "2026",
+            role: "Presenter with Anne Bonds and Chelsea Nestel",
+            conference: "NACIS Conference",
+            title: "Mapping Resistance from the Ground Up"
           }
         ]
       },
@@ -1254,14 +1261,15 @@ Placemaking, Belonging, and Activism.<br></i> Syracuse University Press.</li>
         ]
       }
     ];
+
     const purplePinIcon = L.icon({
-  iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png",
-  shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png",
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41]
-});
+      iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png",
+      shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png",
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
 
     conferenceCities.forEach(function(place) {
       const popupEntries = place.entries.map(function(entry) {
@@ -1281,8 +1289,8 @@ Placemaking, Belonging, and Activism.<br></i> Syracuse University Press.</li>
       `;
 
       L.marker(place.coords, { icon: purplePinIcon })
-  .addTo(conferenceMap)
-  .bindPopup(popupContent);
+        .addTo(conferenceMap)
+        .bindPopup(popupContent);
     });
   }
 </script>
