@@ -934,7 +934,7 @@
   <div class="map-orbit-dots" id="mapOrbitDots"></div>
 </section>
 
-          <style>
+        <style>
   .map30 {
     background: #d9ecff;
     color: #140014;
@@ -1172,43 +1172,41 @@
 <script>
   (() => {
     /*
+      Upload these JPG files into the same folder as index.html.
       Each row contains:
       [map category, Inktober theme, map filename]
-
-      Upload the maps into the same folder as index.html.
-      Change the filenames below if needed.
     */
     const days = [
-      ["Points",            "Relic",       "map-01.png"],
-      ["Lines",             "Miniature",   "map-02.png"],
-      ["Polygons",          "Cactus",      "map-03.png"],
-      ["Clusters",          "Smack",       "map-04.png"],
-      ["Sight",             "Ogre",        "map-05.png"],
-      ["Vintage",           "Panic",       "map-06.png"],
-      ["10 minute map",     "Stinky",      "map-07.png"],
-      ["Utopia",            "Ram",         "map-08.png"],
-      ["Urban-rural",       "Mystical",    "map-09.png"],
-      ["Prompting only",    "Rescue",      "map-10.png"],
-      ["Sound",             "Toss",        "map-11.png"],
-      ["Power",             "Flimsy",      "map-12.png"],
-      ["Interactions",      "Lady",        "map-13.png"],
-      ["Borgesian map",     "Hooray",      "map-14.png"],
-      ["Inside out",        "Gangly",      "map-15.png"],
-      ["Collaborative map", "Contraption", "map-16.png"],
-      ["Light & dark",      "Flightless",  "map-17.png"],
-      ["NULL",              "Confused",    "map-18.png"],
-      ["Smell",             "Lounge",      "map-19.png"],
-      ["Hexagons",          "Hero",        "map-20.png"],
-      ["OpenStreetMap",     "Beacon",      "map-21.png"],
-      ["Projections",       "Dapper",      "map-22.png"],
-      ["Taste",             "Bake",        "map-23.png"],
-      ["Network",           "Fracture",    "map-24.png"],
-      ["Is this a map?",    "Zip",         "map-25.png"],
-      ["Water",             "Dumb",        "map-26.png"],
-      ["New tool",          "Trophy",      "map-27.png"],
-      ["Feeling",           "Tusk",        "map-28.png"],
-      ["Raster",            "Cookie",      "map-29.png"],
-      ["Pen & paper",       "Flex",        "map-30.png"]
+      ["Points",            "Relic",       "map-01.jpg"],
+      ["Lines",             "Miniature",   "map-02.jpg"],
+      ["Polygons",          "Cactus",      "map-03.jpg"],
+      ["Clusters",          "Smack",       "map-04.jpg"],
+      ["Sight",             "Ogre",        "map-05.jpg"],
+      ["Vintage",           "Panic",       "map-06.jpg"],
+      ["10 minute map",     "Stinky",      "map-07.jpg"],
+      ["Utopia",            "Ram",         "map-08.jpg"],
+      ["Urban-rural",       "Mystical",    "map-09.jpg"],
+      ["Prompting only",    "Rescue",      "map-10.jpg"],
+      ["Sound",             "Toss",        "map-11.jpg"],
+      ["Power",             "Flimsy",      "map-12.jpg"],
+      ["Interactions",      "Lady",        "map-13.jpg"],
+      ["Borgesian map",     "Hooray",      "map-14.jpg"],
+      ["Inside out",        "Gangly",      "map-15.jpg"],
+      ["Collaborative map", "Contraption", "map-16.jpg"],
+      ["Light & dark",      "Flightless",  "map-17.jpg"],
+      ["NULL",              "Confused",    "map-18.jpg"],
+      ["Smell",             "Lounge",      "map-19.jpg"],
+      ["Hexagons",          "Hero",        "map-20.jpg"],
+      ["OpenStreetMap",     "Beacon",      "map-21.jpg"],
+      ["Projections",       "Dapper",      "map-22.jpg"],
+      ["Taste",             "Bake",        "map-23.jpg"],
+      ["Network",           "Fracture",    "map-24.jpg"],
+      ["Is this a map?",    "Zip",         "map-25.jpg"],
+      ["Water",             "Dumb",        "map-26.jpg"],
+      ["New tool",          "Trophy",      "map-27.jpg"],
+      ["Feeling",           "Tusk",        "map-28.jpg"],
+      ["Raster",            "Cookie",      "map-29.jpg"],
+      ["Pen & paper",       "Flex",        "map-30.jpg"]
     ];
 
     const grid = document.getElementById("map30-days");
