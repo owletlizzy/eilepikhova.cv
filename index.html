@@ -1236,15 +1236,18 @@
 
       addText("map30-number", String(day).padStart(2, "0"));
 
-      const icon = document.createElementNS(svgNamespace, "svg");
-      icon.classList.add("map30-icon");
-      icon.setAttribute("viewBox", "0 0 48 48");
-      icon.setAttribute("aria-hidden", "true");
-
-      const use = document.createElementNS(svgNamespace, "use");
-      use.setAttribute("href", "#map30-map-icon");
-      icon.appendChild(use);
-      link.appendChild(icon);
+     const image = document.createElement("img");
+image.src = filename;
+image.alt = `${category} — ${theme}`;
+image.loading = "lazy";
+image.style.cssText = `
+  display: block;
+  width: 100%;
+  height: 85px;
+  object-fit: contain;
+  border-radius: 4px;
+`;
+link.appendChild(image);
 
       addText("map30-type", category);
       addText("map30-theme", theme);
