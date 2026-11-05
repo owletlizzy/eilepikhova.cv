@@ -933,6 +933,330 @@
 
   <div class="map-orbit-dots" id="mapOrbitDots"></div>
 </section>
+
+          <style>
+  .map30 {
+    background: #d9ecff;
+    color: #140014;
+    max-width: 1080px;
+    margin: 40px auto;
+    padding: 28px 20px;
+    box-sizing: border-box;
+    font-family: Georgia, Times, "Times New Roman", serif;
+  }
+
+  .map30 * {
+    box-sizing: border-box;
+  }
+
+  .map30 h2 {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26.4px;
+    text-align: center;
+    text-decoration: underline;
+    color: #140014;
+    margin: 0 0 14px;
+  }
+
+  .map30 .map30-intro {
+    max-width: 700px;
+    margin: 0 auto 24px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  .map30-scroll {
+    overflow-x: auto;
+    padding: 5px 5px 14px;
+  }
+
+  .map30-weekdays,
+  .map30-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 10px;
+    min-width: 740px;
+  }
+
+  .map30-weekdays {
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .map30 .map30-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .map30 .map30-day {
+    display: block;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .map30 a.map30-link {
+    display: flex;
+    height: 100%;
+    min-height: 190px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 8px;
+    background: #eef6ff;
+    color: #140014;
+    border: 2px solid #140014;
+    border-radius: 6px;
+    box-shadow: 3px 3px 0 #79a9d8;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.15s, background 0.15s;
+  }
+
+  .map30 a.map30-link:visited {
+    background: #eef6ff;
+    color: #140014;
+  }
+
+  .map30 a.map30-link:hover {
+    background: #f7effb;
+    color: #140014;
+    transform: translateY(-3px);
+  }
+
+  .map30 a.map30-link:focus-visible {
+    outline: 3px solid #a00090;
+    outline-offset: 4px;
+  }
+
+  .map30-number {
+    align-self: flex-start;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .map30-icon {
+    width: 36px;
+    height: 36px;
+    color: #684b83;
+    flex-shrink: 0;
+  }
+
+  .map30-type {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .map30-theme {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+
+  .map30-open {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  .map30 .map30-note {
+    margin: 18px 0 0;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 600px) {
+    .map30 {
+      padding: 24px 8px;
+      margin: 24px auto;
+    }
+
+    .map30-weekdays,
+    .map30-grid {
+      gap: 7px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .map30 a.map30-link {
+      transition: none;
+    }
+
+    .map30 a.map30-link:hover {
+      transform: none;
+    }
+  }
+</style>
+
+<section class="map30" aria-labelledby="map30-title">
+  <h2 id="map30-title">#30DayMapChallenge — November 2026</h2>
+
+  <p class="map30-intro">
+    Thirty maps, two sets of inspiration: daily #30DayMapChallenge
+    categories paired with Inktober 2026 themes, skipping Apple.
+    Select a day to open its map in a new tab.
+  </p>
+
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="0"
+    height="0"
+    aria-hidden="true"
+    style="position: absolute; overflow: hidden;"
+  >
+    <defs>
+      <symbol id="map30-map-icon" viewBox="0 0 48 48">
+        <path
+          d="m5 11 12-5 14 5 12-5v31l-12 5-14-5-12 5Z"
+          fill="currentColor"
+          fill-opacity=".1"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M17 6v31m14-26v31M9 27l5-6 7 4 7-7 9 3"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <circle cx="28" cy="18" r="3" fill="currentColor" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <div
+    class="map30-scroll"
+    role="region"
+    aria-label="November calendar. Scroll sideways on smaller screens."
+    tabindex="0"
+  >
+    <div class="map30-weekdays" aria-hidden="true">
+      <span>Sun</span>
+      <span>Mon</span>
+      <span>Tue</span>
+      <span>Wed</span>
+      <span>Thu</span>
+      <span>Fri</span>
+      <span>Sat</span>
+    </div>
+
+    <ol class="map30-grid" id="map30-days"></ol>
+  </div>
+
+  <p class="map30-note">
+    Maps are added throughout the month.
+    On smaller screens, scroll sideways to see the full week.
+  </p>
+</section>
+
+<script>
+  (() => {
+    /*
+      Each row contains:
+      [map category, Inktober theme, map filename]
+
+      Upload the maps into the same folder as index.html.
+      Change the filenames below if needed.
+    */
+    const days = [
+      ["Points",            "Relic",       "map-01.png"],
+      ["Lines",             "Miniature",   "map-02.png"],
+      ["Polygons",          "Cactus",      "map-03.png"],
+      ["Clusters",          "Smack",       "map-04.png"],
+      ["Sight",             "Ogre",        "map-05.png"],
+      ["Vintage",           "Panic",       "map-06.png"],
+      ["10 minute map",     "Stinky",      "map-07.png"],
+      ["Utopia",            "Ram",         "map-08.png"],
+      ["Urban-rural",       "Mystical",    "map-09.png"],
+      ["Prompting only",    "Rescue",      "map-10.png"],
+      ["Sound",             "Toss",        "map-11.png"],
+      ["Power",             "Flimsy",      "map-12.png"],
+      ["Interactions",      "Lady",        "map-13.png"],
+      ["Borgesian map",     "Hooray",      "map-14.png"],
+      ["Inside out",        "Gangly",      "map-15.png"],
+      ["Collaborative map", "Contraption", "map-16.png"],
+      ["Light & dark",      "Flightless",  "map-17.png"],
+      ["NULL",              "Confused",    "map-18.png"],
+      ["Smell",             "Lounge",      "map-19.png"],
+      ["Hexagons",          "Hero",        "map-20.png"],
+      ["OpenStreetMap",     "Beacon",      "map-21.png"],
+      ["Projections",       "Dapper",      "map-22.png"],
+      ["Taste",             "Bake",        "map-23.png"],
+      ["Network",           "Fracture",    "map-24.png"],
+      ["Is this a map?",    "Zip",         "map-25.png"],
+      ["Water",             "Dumb",        "map-26.png"],
+      ["New tool",          "Trophy",      "map-27.png"],
+      ["Feeling",           "Tusk",        "map-28.png"],
+      ["Raster",            "Cookie",      "map-29.png"],
+      ["Pen & paper",       "Flex",        "map-30.png"]
+    ];
+
+    const grid = document.getElementById("map30-days");
+    const svgNamespace = "http://www.w3.org/2000/svg";
+
+    days.forEach(([category, theme, filename], index) => {
+      const day = index + 1;
+      const item = document.createElement("li");
+      item.className = "map30-day";
+
+      const link = document.createElement("a");
+      link.className = "map30-link";
+      link.href = filename;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.setAttribute(
+        "aria-label",
+        `November ${day}, 2026: ${category} + ${theme}. Open map in a new tab.`
+      );
+
+      const addText = (className, text) => {
+        const span = document.createElement("span");
+        span.className = className;
+        span.textContent = text;
+        link.appendChild(span);
+      };
+
+      addText("map30-number", String(day).padStart(2, "0"));
+
+      const icon = document.createElementNS(svgNamespace, "svg");
+      icon.classList.add("map30-icon");
+      icon.setAttribute("viewBox", "0 0 48 48");
+      icon.setAttribute("aria-hidden", "true");
+
+      const use = document.createElementNS(svgNamespace, "use");
+      use.setAttribute("href", "#map30-map-icon");
+      icon.appendChild(use);
+      link.appendChild(icon);
+
+      addText("map30-type", category);
+      addText("map30-theme", theme);
+      addText("map30-open", "View map ↗");
+
+      item.appendChild(link);
+      grid.appendChild(item);
+    });
+  })();
+</script>
           
           <h2>Relevant Work and Internship Experience</h2>
         
